@@ -1,1 +1,11 @@
 @import 'tailwindcss';
+
+@theme {
+  --font-quicksand: "Quicksand", sans-serif;
+
+  --color-light: #FFFFFF;
+  --color-black: #000000;
+  --color-text: #0A0D12;
+  --color-orange: #FF623E;
+  --color-gray: #717680;
+}

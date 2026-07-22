@@ -5,39 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 3 - Landing Page</title>
     <link href="./output.css" rel="stylesheet" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <img src="../assets/icons/logo-symbol.svg" alt="Logo Symbol">
-        <p class="tech">Your Logo</p>
-        <ul class="desktop-menu">
-          <li>About</li>
-          <li>Service</li>
-          <li>Portfolio</li>
-          <li>Testimonials</li>
-          <li>FAQ</li>
-        </ul>
-        <button class="desktop-contact-btn">
-          <p class="contact-paragraph">Contact Us</p>
-        </button>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="hamburger-btn"><img src="../assets/icons/Icon hamburger.svg" alt="Menu"></label>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
-        <div class="mobile-menu">
-          <div class="menu-header">
-            <img src="../assets/icons/logo-symbol.svg" alt="Logo Simbol">
-            <p class="tech">Tech.</p>
-            <label for="menu-toggle" class="close-btn">X</label>
+  </head>
+  <body class="font-quicksand">
+    <header class="w-full h-16 flex items-center px-4 md:px-10 lg:px-20 border-b border-gray/20 ">
+      <nav class="flex items-center justify-between w-full">
+        <div class="flex items-center gap-2">
+          <img src="../assets/icons/logo-symbol.svg" alt="Logo Symbol" class="w-6 h-6">
+          <p class="font-semibold text-xl text-text">Your Logo</p>
+        </div>
+        <ul class="hidden lg:flex lg:items-center lg:gap-8 text-text font-medium">
+          <li class="hover:text-orange cursor-pointer">About</li>
+          <li class="hover:text-orange cursor-pointer">Service</li>
+          <li class="hover:text-orange cursor-pointer">Portfolio</li>
+          <li class="hover:text-orange cursor-pointer">Testimonials</li>
+          <li class="hover:text-orange cursor-pointer">FAQ</li>
+        </ul>
+        <button class="hidden lg:flex lg:items-center lg:justify-center h-11 px-6 rounded-full bg-orange hover:opacity-90 transition-opacity">
+          <p class="text-light font-medium">Let's Talk</p>
+        </button>
+        <input type="checkbox" id="menu-toggle" class="hidden peer">
+        <label for="menu-toggle" class="hamburger-btn lg:hidden cursor-pointer"><img src="../assets/icons/Icon hamburger.svg" alt="Menu" class="w-6 h-6"></label>
+
+        <div class="mobile-menu fixed inset-0 z-50 bg-light translate-x-full peer-checked:translate-x-0 transition-transform duration-300 ease-in-out lg:hidden">
+          <div class="menu-header flex items-center justify-between px-4 h-16 border-b border-gray/20">
+            <div class="flex items-center gap-2">
+              <img src="../assets/icons/logo-symbol.svg" alt="Logo Simbol" class="w-6 h-6">
+              <p class="font-semibold text-xl text-text">Your Logo</p>
+            </div>
+            <label for="menu-toggle" class="cursor-pointer text-2xl leading-none text-text">X</label>
           </div>
-          <ul>
-          <li>About</li>
-          <li>Service</li>
-          <li>Portfolio</li>
-          <li>Testimonials</li>
-          <li>FAQ</li>
+          <ul class="flex flex-col gap-6 px-4 py-6 text-text font-medium">
+          <li class="hover:text-orange cursor-pointer">About</li>
+          <li class="hover:text-orange cursor-pointer">Service</li>
+          <li class="hover:text-orange cursor-pointer">Portfolio</li>
+          <li class="hover:text-orange cursor-pointer">Testimonials</li>
+          <li class="hover:text-orange cursor-pointer">FAQ</li>
           </ul>
-          <button class="mobile-contact-btn"><p class="contact-paragraph">Contact Us</p></button>
+          <button class="mobile-contact-btn block mx-4 h-11 w-[calc(100%-2rem)] rounded-full bg-orange hover:opacity-90 transition-opacity"><p class="contact-paragraph text-light font-medium">Contact Us</p></button>
         </div>
       </nav>
       
@@ -70,6 +78,7 @@
             <img src="../assets/icons/Company logo 8.png" alt="Logo Company 8">
             <img src="../assets/icons/Company logo 9.png" alt="Logo Company 9">
           </div>
+        </div>
       </section>
       <section class="solutions">
         <div class="solutions-text">
@@ -106,7 +115,7 @@
 
             <li class="our-process-step">
               <div class="our-process-content">
-                <span clas="our-process-step-number">1</span>
+                <span class="our-process-step-number">1</span>
               </div>
               <div class="our-process-accordion">
                 <div class="our-process-container">
@@ -121,7 +130,7 @@
 
             <li class="our-process-step">
               <div class="our-process-content">
-                <span clas="our-process-step-number">2</span>
+                <span class="our-process-step-number">2</span>
               </div>
               <div class="our-process-accordion">
                 <div class="our-process-container">
@@ -136,7 +145,7 @@
 
             <li class="our-process-step">
               <div class="our-process-content">
-                <span clas="our-process-step-number">3</span>
+                <span class="our-process-step-number">3</span>
               </div>
               <div class="our-process-accordion">
                 <div class="our-process-container">
@@ -151,7 +160,7 @@
 
             <li class="our-process-step">
               <div class="our-process-content">
-                <span clas="our-process-step-number">4</span>
+                <span class="our-process-step-number">4</span>
               </div>
               <div class="our-process-accordion">
                 <div class="our-process-container">
@@ -166,7 +175,7 @@
 
             <li class="our-process-step">
               <div class="our-process-content">
-                <span clas="our-process-step-number">5</span>
+                <span class="our-process-step-number">5</span>
               </div>
               <div class="our-process-accordion">
                 <div class="our-process-container">
@@ -181,7 +190,7 @@
 
             <li class="our-process-step">
               <div class="our-process-content">
-                <span clas="our-process-step-number">6</span>
+                <span class="our-process-step-number">6</span>
               </div>
               <div class="our-process-accordion">
                 <div class="our-process-container">
@@ -266,11 +275,11 @@
               <span></span>
               <p>Fintech</p>
 
-              <div class="industry-list2">
+            <div class="industry-list2">
               <span></span>
               <p>E-Commerce</p>
 
-              <div class="industry-list2">
+            <div class="industry-list2">
               <span></span>
               <p>Healthcare</p>
             </div>
@@ -428,36 +437,36 @@
               <p>Services</p>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="services" value="web-development" checked>
+                <input type="checkbox" name="services" value="web-development">
                 <span class="checkbox-label">Web Development</span>
               </label>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="services" value="mobile-app-development" checked>
+                <input type="checkbox" name="services" value="mobile-app-development">
                 <span class="checkbox-label">Mobile App Development</span>
               </label>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="services" value="ui-ux-design" checked>
+                <input type="checkbox" name="services" value="ui-ux-design">
                 <span class="checkbox-label">UI/UX Design</span>
               </label>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="services" value="cloud-solutions" checked>
+                <input type="checkbox" name="services" value="cloud-solutions">
                 <span class="checkbox-label">Cloud Solutions</span>
               </label>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="services" value="software-development" checked>
+                <input type="checkbox" name="services" value="software-development">
                 <span class="checkbox-label">Software Development</span>
               </label>
 
               <label class="checkbox-item">
-                <input type="checkbox" name="services" value="other" checked>
+                <input type="checkbox" name="services" value="other">
                 <span class="checkbox-label">Other</span>
               </label>
-            <button type="submit">Send</button>
             </div>
+            <button type="submit">Send</button>
           </div>
         </div>
       </section>
