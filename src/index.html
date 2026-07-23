@@ -8,29 +8,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-
   </head>
-  <body class="font-quicksand">
-    <header class="w-full h-16 flex items-center px-4 md:px-10 lg:px-20 border-b border-gray/20 ">
+  
+      <body class="font-quicksand">
+    <header class="sticky top-0 z-50 w-full h-16 flex items-center px-4 md:px-10 lg:px-20 border-b border-gray/20 bg-light/70 backdrop-blur-md shadow-sm ">
       <nav class="flex items-center justify-between w-full">
         <div class="flex items-center gap-2">
-          <img src="../assets/icons/logo-symbol.svg" alt="Logo Symbol" class="w-6 h-6">
+          <img src="../assets/icons/logo-symbol.svg" alt="Logo Symbol" class="w-6 h-7">
           <p class="font-semibold text-xl text-text">Your Logo</p>
         </div>
-        <ul class="hidden lg:flex lg:items-center lg:gap-8 text-text font-medium">
+        <ul class="hidden lg:flex lg:items-center lg:gap-8 text-text font-semibold text-base">
           <li class="hover:text-orange cursor-pointer">About</li>
           <li class="hover:text-orange cursor-pointer">Service</li>
           <li class="hover:text-orange cursor-pointer">Portfolio</li>
           <li class="hover:text-orange cursor-pointer">Testimonials</li>
           <li class="hover:text-orange cursor-pointer">FAQ</li>
         </ul>
-        <button class="hidden lg:flex lg:items-center lg:justify-center h-11 px-6 rounded-full bg-orange hover:opacity-90 transition-opacity">
-          <p class="text-light font-medium">Let's Talk</p>
+        <button class="hidden lg:flex lg:items-center lg:justify-center w-49.25 h-11 px-6 rounded-full bg-orange hover:opacity-90 transition-opacity">
+          <p class="text-light font-bold text-sm">Let's Talk</p>
         </button>
-        <input type="checkbox" id="menu-toggle" class="hidden peer">
         <label for="menu-toggle" class="hamburger-btn lg:hidden cursor-pointer"><img src="../assets/icons/Icon hamburger.svg" alt="Menu" class="w-6 h-6"></label>
-
-        <div class="mobile-menu fixed inset-0 z-50 bg-light translate-x-full peer-checked:translate-x-0 transition-transform duration-300 ease-in-out lg:hidden">
+      </nav>
+    </header>
+    <input type="checkbox" id="menu-toggle" class="hidden peer">
+    <div class="mobile-menu fixed inset-0 z-50 bg-light translate-x-full peer-checked:translate-x-0 transition-transform duration-300 ease-in-out lg:hidden">
           <div class="menu-header flex items-center justify-between px-4 h-16 border-b border-gray/20">
             <div class="flex items-center gap-2">
               <img src="../assets/icons/logo-symbol.svg" alt="Logo Simbol" class="w-6 h-6">
@@ -38,38 +39,35 @@
             </div>
             <label for="menu-toggle" class="cursor-pointer text-2xl leading-none text-text">X</label>
           </div>
-          <ul class="flex flex-col gap-6 px-4 py-6 text-text font-medium">
+          <ul class="flex flex-col gap-6 px-4 py-6 text-text font-semibold text-sm">
           <li class="hover:text-orange cursor-pointer">About</li>
           <li class="hover:text-orange cursor-pointer">Service</li>
           <li class="hover:text-orange cursor-pointer">Portfolio</li>
           <li class="hover:text-orange cursor-pointer">Testimonials</li>
           <li class="hover:text-orange cursor-pointer">FAQ</li>
           </ul>
-          <button class="mobile-contact-btn block mx-4 h-11 w-[calc(100%-2rem)] rounded-full bg-orange hover:opacity-90 transition-opacity"><p class="contact-paragraph text-light font-medium">Contact Us</p></button>
+          <button class="mobile-contact-btn block mx-4 h-11 w-[calc(100%-2rem)] rounded-full bg-orange hover:opacity-90 transition-opacity"><p class="contact-paragraph text-light font-medium">Let's Talk</p></button>
         </div>
-      </nav>
-      
-    </header>
     <main>
-      <section class="hero flex flex-col items-center px-4 md:px-10 lg:px-20 pt-8 lg:flex-row lg:justify-between lg:pt-16">
-        <div class="inside-hero flex flex-col gap-10 w-full max-w-[361px] lg:max-w-xl">       
+      <section class="hero flex flex-col items-center px-4 md:px-10 lg:px-20 pt-8 lg:flex-row lg:justify-between lg:pt-12">
+        <div class="inside-hero flex flex-col gap-10 w-full max-w-90.25 lg:max-w-130 lg:mt-3">       
           <div class="hero-text flex flex-col gap-3">
             <p class="text-3xl lg:text-5xl font-bold leading-tight text-text">Your Tech Partner for <span class="text-orange">Smarter Growth</span></p>
-            <p class="text-gray lg:text-lg">We deliver tailored IT solutions to help you scale with speed and confidence.</p>
+            <p class="text-text lg:text-lg font-semibold">We deliver tailored IT solutions to help you scale with speed and confidence.</p>
           </div>
           <div class="hero-button">
-            <button class="w-full lg:w-auto lg:px-8 h-11 rounded-full p-2 flex items-center justify-center gap-1 bg-orange hover:opacity-90 transition-opacity">
-              <p class="text-light font-medium">Let’s Talk</p>
+            <button class="w-full lg:w-50 lg:px-8 h-12 rounded-full p-2 flex items-center justify-center gap-1 bg-orange hover:opacity-90 transition-opacity">
+              <p class="text-light font-bold text-base">Let’s Talk</p>
             </button>
           </div>
         </div>
-        <img src="../assets/images/Image Hero.png" alt="Image Hero" class="w-full lg:w-[450px] h-auto mt-10 lg:mt-0">
+        <img src="../assets/images/Image Hero.png" alt="Image Hero" class="w-full lg:w-186.75 h-auto mt-10 lg:mt-0">
       </section>
 
       <section class="content w-full px-4 py-10 md:px-8 md:py-12 lg:px-20 lg:py-10">
-        <div class="mx-auto max-w-[393px] md:max-w-[768px] lg:max-w-[1248px]">
-        <p class="text-center text-sm font-medium text-text md:text-base">Trusted by Global Innovators & Leading Brands</p>
-          <div class="logo-rows-wrapper mt-8 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+        <div class="mx-auto max-w-98.25 md:max-w-3xl lg:max-w-312">
+        <p class="text-center text-base lg:text-2xl font-bold text-text md:text-base">Trusted by Global Innovators & Leading Brands</p>
+          <div class="logo-rows-wrapper lg:mt-14 mt-8 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
             <div class="logo-rows-mobile flex md:hidden items-center gap-8 overflow-x-auto scrollbar-hide justify-center">
               <img src="../assets/icons/Company logo 4.svg" alt="Logo Company 4" class="h-7 w-auto grayscale opacity-70">
             <img src="../assets/icons/Company logo 5.svg" alt="Logo Company 5" class="h-7 w-auto grayscale opacity-70">
@@ -93,33 +91,31 @@
             <img src="../assets/icons/Company logo 6.svg" alt="Logo Company 6" class="h-12 w-auto grayscale opacity-70">
             <img src="../assets/icons/Company logo 7.svg" alt="Logo Company 7" class="h-12 w-auto grayscale opacity-70">
             <img src="../assets/icons/Company logo 8.svg" alt="Logo Company 8" class="h-12 w-auto grayscale opacity-70">
-            
             </div>
-            
           </div>
         </div>
       </section>
-      <section class="solutions">
-        <div class="solutions-text">
-          <p>End-to-End IT Solutions That Drive Results</p>
-          <p>From strategy to execution, we deliver solutions that grow your business.</p>
+      <section class="solutions w-full px-4 py-16 md:px-8 md:py-20 lg:px-20 lg:py-24">
+        <div class="solutions-text mx-auto text-center lg:max-w-290">
+          <p class="text-[28px] font-bold text-text md:text-[35px] lg:text-[40px]">End-to-End IT Solutions That Drive Results</p>
+          <p class="mt-4 font-medium text-sm text-gray md:text-base lg:text-lg">From strategy to execution, we deliver solutions that grow your business.</p>
         </div>
-        <div class="solutions-card">
-          <article>
-            <p>50+</p>
-            <p>Projects Delivered </p>
+        <div class="solutions-card mt-12 grid grid-cols-2 justify-items-center gap-2 md:gap-4 lg:grid-cols-4 lg:gap-6 md:grid-cols-2">
+          <article class="flex md:h-50 md:w-50 lg:h-63.75 lg:w-63.75 h-[172.5px] w-[172.5px] flex-col items-center justify-center gap-2 rounded-full bg-circle border border-border border-solid">
+            <p class="text-4xl lg:text-5xl md:text-[41px] font-bold text-orange">50+</p>
+            <p class="text-center text-sm lg:text-xl md:text-[17px] text-text font-semibold">Projects Delivered </p>
           </article>
-          <article>
-            <p>5+</p>
-            <p>Years of Experience</p>
+          <article class="flex md:h-50 md:w-50 lg:h-63.75 lg:w-63.75 h-[172.5px] w-[172.5px] flex-col items-center justify-center gap-2 rounded-full bg-circle border border-border border-solid">
+            <p class="text-4xl lg:text-5xl md:text-[41px] font-bold text-orange">5+</p>
+            <p class="text-center text-sm lg:text-xl md:text-[17px] text-text font-semibold">Years of Experience</p>
           </article>
-          <article>
-            <p>10+</p>
-            <p>Industry Awards Won</p>
+          <article class="flex md:h-50 md:w-50 lg:h-63.75 lg:w-63.75 h-[172.5px] w-[172.5px] flex-col items-center justify-center gap-2 rounded-full bg-circle border border-border border-solid">
+            <p class="text-4xl lg:text-5xl md:text-[41px] font-bold text-orange">10+</p>
+            <p class="text-center text-sm lg:text-xl md:text-[17px] text-text font-semibold">Industry Awards Won</p>
           </article>
-          <article>
-            <p>100+</p>
-            <p>Client Satisfaction Rate</p>
+          <article class="flex md:h-50 md:w-50 lg:h-63.75 lg:w-63.75 h-[172.5px] w-[172.5px] flex-col items-center justify-center gap-2 rounded-full bg-circle border border-border border-solid">
+            <p class="text-4xl lg:text-5xl md:text-[41px] font-bold text-orange">100%</p>
+            <p class="text-center text-sm lg:text-xl md:text-[17px] text-text font-semibold">Client Satisfaction Rate</p>
           </article>
         </div>
       </section>
