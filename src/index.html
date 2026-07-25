@@ -436,70 +436,89 @@
           </div>
         </div>
       </section>
-      <section class="form">
-        <div class="form-container">
-          <div class="form-text">
-            <p>Ready to Start? Let’s Talk.</p>
-            <p>Tell us what you need, and we’ll get back to you soon.</p>
+      <section class="form w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-20">
+        <div class="form-container mx-auto max-w-[720px]">
+          <div class="form-text flex flex-col items-center text-center gap-3 mb-10">
+            <p class="font-bold text-text text-[28px] lg:text-[40px] md:text-[35px]">Ready to Start? Let’s Talk.</p>
+            <p class="font-medium text-gray text-sm lg:text-lg md:text-base">Tell us what you need, and we’ll get back to you soon.</p>
           </div>
-          <div class="form-fields">
-            <div class="input-fields">
-              <label for="name" class="input-label">Name</label>
-              <input type="text" id="name" name="name" class="name-input" placeholder="Enter your name">
+          <form class="form-fields flex flex-col gap-6" id="contactForm">
+            <div class="input-fields flex flex-col gap-2">
+              <label for="name" class="input-label font-bold text-text text-sm">Name</label>
+              <input type="text" id="name" name="name" required class="name-input font-medium text-gray text-sm lg:text-base border border-border rounded-xl px-4 py-3 outline-none focus:border-orange transition-colors" placeholder="Enter your name">
             </div>
 
-            <div class="input-fields">
-              <label for="email" class="input-label">Email</label>
-              <input type="email" id="email" name="email" class="email-input" placeholder="Enter your email">
+            <div class="input-fields flex flex-col gap-2">
+              <label for="email" class="input-label font-bold text-text text-sm">Email</label>
+              <input type="email" id="email" name="email" required class="email-input font-medium text-gray text-sm lg:text-base border border-border rounded-xl px-4 py-3 outline-none focus:border-orange transition-colors" placeholder="Enter your email">
             </div>
 
-            <div class="input-fields">
-              <label for="message" class="input-label">Message</label>
-              <textarea id="message" name="message" class="message-input" placeholder="Enter your message"></textarea>
+            <div class="input-fields flex flex-col gap-2">
+              <label for="message" class="input-label font-bold text-text text-sm">Message</label>
+              <textarea id="message" name="message" required class="message-input h-40 resize-none font-medium text-gray text-sm lg:text-base border border-border rounded-xl px-4 py-3 outline-none focus:border-orange transition-colors" placeholder="Enter your message"></textarea>
             </div>
+            
+            <div class="flex flex-col gap-[15px]">
+              <form class="form-service flex flex-col gap-4">
+              <p class="font-bold text-text text-sm lg:">Services</p>
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-4">
+                <label class="checkbox-item flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" name="services" value="web-development" class="w-5 h-5 accent-orange">
+                  <span class="checkbox-label text-text text-medium text text-sm lg:text-base md:text-[15px]">Web Development</span>
+                </label>
 
-            <div class="form-service">
-              <p>Services</p>
+                <label class="checkbox-item flex items-center gap-2 cursor-pointer ">
+                  <input type="checkbox" name="services" value="mobile-app-development" class="w-5 h-5 accent-orange">
+                  <span class="checkbox-label text-text text-medium text text-sm lg:text-base md:text-[15px]">Mobile App Development</span>
+                </label>
 
-              <label class="checkbox-item">
-                <input type="checkbox" name="services" value="web-development">
-                <span class="checkbox-label">Web Development</span>
-              </label>
+                <label class="checkbox-item flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" name="services" value="ui-ux-design" class="w-5 h-5 accent-orange">
+                  <span class="checkbox-label text-text text-medium text text-sm lg:text-base md:text-[15px]">UI/UX Design</span>
+                </label>
 
-              <label class="checkbox-item">
-                <input type="checkbox" name="services" value="mobile-app-development">
-                <span class="checkbox-label">Mobile App Development</span>
-              </label>
+                <label class="checkbox-item flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" name="services" value="cloud-solutions" class="w-5 h-5 accent-orange">
+                  <span class="checkbox-label text-text text-medium text text-sm lg:text-base md:text-[15px]">Cloud Solutions</span>
+                </label>
 
-              <label class="checkbox-item">
-                <input type="checkbox" name="services" value="ui-ux-design">
-                <span class="checkbox-label">UI/UX Design</span>
-              </label>
+                <label class="checkbox-item flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" name="services" value="software-development" class="w-5 h-5 accent-orange">
+                  <span class="checkbox-label text-text text-medium text text-sm lg:text-base md:text-[15px]">Software Development</span>
+                </label>
 
-              <label class="checkbox-item">
-                <input type="checkbox" name="services" value="cloud-solutions">
-                <span class="checkbox-label">Cloud Solutions</span>
-              </label>
-
-              <label class="checkbox-item">
-                <input type="checkbox" name="services" value="software-development">
-                <span class="checkbox-label">Software Development</span>
-              </label>
-
-              <label class="checkbox-item">
-                <input type="checkbox" name="services" value="other">
-                <span class="checkbox-label">Other</span>
-              </label>
+                <label class="checkbox-item flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" name="services" value="other" class="w-5 h-5 accent-orange">
+                  <span class="checkbox-label text-text text-medium text text-sm lg:text-base md:text-[15px]">Other</span>
+                </label>
+              </div>
+            </form>
+            <button type="submit" class="text-light font-bold text-sm lg:text-base md:text[15px] w-full h-12 rounded-full bg-orange mt-2">Send</button>
             </div>
-            <button type="submit">Send</button>
           </div>
         </div>
       </section>
+      <div id="successModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/40 px-4">
+        <div class="bg-light rounded-3xl border border-border p-10 max-w-[520px] w-full text-center flex flex-col gap-[15px]">
+          <img src="../assets/icons/success send.svg" alt="Success Send" class="mx-auto w-[228px] w-[228px]">
+          <p class="font-bold text-text text-lg lg:text-xl md:text[19px]">Message Received!</p>
+          <p class="font-medium text-gray text-sm lg:text-base md:text[15px]">Thanks for reaching out — we’ll get back to you as soon as possible.</p>
+          <button id="closeSuccessModal" class="w-full h-11 rounded-full bg-orange text-light font-bold hover:opacity-90 text-sm lg:text-base md:text[15px] transition-opacity">Back To Home</button>
+        </div>
+      </div>
+      <div id="failedModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/40 px-4">
+        <div class="bg-light rounded-3xl border border-border p-8 max-w-sm w-full text-center">
+          <img src="../assets/icons/failedsend.svg" alt="Failed Send" class="mx-auto w-24 h-24">
+          <p class="font-bold text-text text-lg lg:text-xl md:text[19px]">Oops! Something went wrong.</p>
+          <p class="font-medium text-gray text-sm lg:text-base md:text[15px]">We couldn’t send your message. Please try again or check your connection.</p>
+          <button id="closeFailedModal" class="w-full h-11 rounded-full bg-orange text-light font-bold hover:opacity-90 text-sm lg:text-base md:text[15px] transition-opacity">Try Again</button>
+        </div>
+      </div>
     </main>
     <footer class="w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-16 ">
       <div class="footer-container mx-auto max-w-[1160px] border border-footer border-solid bg-circle rounded-2xl px-6 py-8 md:px-10 md:py-10 lg:px-12 lg:py-12">
         <div class="footer-text flex flex-col-reverse gap-6 lg:flex-row lg:items-start lg:justify-between">
-          <p class="text-text font-bold text-[28px] lg:text-[36px] md:text-[31px]">LET'S DISCUSS YOUR IDEAS</p>
+          <p class="text-text font-bold text-[28px] lg:text-[36px] lg:leading-[44px]">LET'S DISCUSS YOUR IDEAS</p>
           <div class="flex items-center gap-2"> 
             <img src="../assets/icons/logo-symbol.svg" alt="Logo" class="w-6 h-6">
             <span class="font-semibold text-black text-xl lg:text-2xl md:text-[22px]">Your Logo</span>
@@ -523,5 +542,38 @@
         </div>
       </div>
     </footer>
+    <script>
+  const contactForm = document.getElementById('contactForm');
+  const successModal = document.getElementById('successModal');
+  const failedModal = document.getElementById('failedModal');
+  const closeSuccessBtn = document.getElementById('closeSuccessModal');
+  const closeFailedBtn = document.getElementById('closeFailedModal');
+
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault(); 
+
+    
+    const isSuccess = true;
+
+    if (isSuccess) {
+      successModal.classList.remove('hidden');
+      successModal.classList.add('flex');
+      contactForm.reset();
+    } else {
+      failedModal.classList.remove('hidden');
+      failedModal.classList.add('flex');
+    }
+  });
+
+  closeSuccessBtn.addEventListener('click', () => {
+    successModal.classList.add('hidden');
+    successModal.classList.remove('flex');
+  });
+
+  closeFailedBtn.addEventListener('click', () => {
+    failedModal.classList.add('hidden');
+    failedModal.classList.remove('flex');
+  });
+</script>
   </body>
 </html>
