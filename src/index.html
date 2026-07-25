@@ -390,57 +390,60 @@
           </div>
         </div>
       </section>
-      <section class="FAQ">
-        <div class="FAQ-text">
-          <p>Need Help? Start Here.</p>
-          <p>Everything you need to know — all in one place.</p>
+      <section class="FAQ w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-20">
+        <div class="FAQ-text flex flex-col md:flex-row md:items-end md:justify-between gap-2 mb-8 border-b border-footer py-5">
+          <p class="font-bold text-text text-[28px] lg:text-[40px] md:text-[35px]">Need Help? Start Here.</p>
+          <p class="font-medium text-gray text-sm">Everything you need to know — all in one place.</p>
         </div>
-        <span></span>
-        <div class="FAQ-content">
-          <div class="FAQ-container">
-            <div class="FAQ-accordion">
-              <div class="FAQ-header">
-                <p>What services do you offer?</p>
-                <span>-</span>
-              </div>
-              <p>We provide custom web/app development, cloud solutions, UX/UI design, and more.</p>
+        <div class="FAQ-content flex flex-col lg:flex-row gap-8 lg:gap-10">
+          <div class="FAQ-container flex-1 flex flex-col">
+            <div class="FAQ-accordion border-b border-footer py-5">
+              <button class="FAQ-header w-full flex items-center justify-between text-left" aria-expanded="false">
+                <p class="font-bold text-text text-lg lg:text-2xl md:text-xl">What services do you offer?</p>
+                <span class="FAQ-icon text-2xl text-text shrink-0">+</span>
+              </button>
+              <p class="FAQ-answer font-medium text-gray text-sm lg:text-xl md:text-[17px]">We provide custom web/app development, cloud solutions, UX/UI design, and more.</p>
             </div>
-            <span></span>
-            <div class="FAQ-accordion">
-              <div class="FAQ-header">
-                <p>How do I know if this is right for my business?</p>
-                <span>+</span>
-              </div>
+
+            <div class="FAQ-accordion border-b border-footer py-5">
+              <button class="FAQ-header w-full flex items-center justify-between text-left" aria-expanded="false">
+                <p class="font-bold text-text text-lg lg:text-2xl md:text-xl">How do I know if this is right for my business?</p>
+                <span class="FAQ-icon text-2xl text-text shrink-0">+</span>
+              </button>
+              <p class="FAQ-answer font-medium text-gray text-sm lg:text-xl md:text-[17px]">Book a free consult — we’ll assess your goals and recommend the right approach.</p>
             </div>
-            <span></span>
-            <div class="FAQ-accordion">
-              <div class="FAQ-header">
-                <p>How much does a project cost?</p>
-                <span>+</span>
-              </div>
+            
+            <div class="FAQ-accordion border-b border-footer py-5">
+              <button class="FAQ-header w-full flex items-center justify-between text-left" aria-expanded="false">
+                <p class="font-bold text-text text-lg lg:text-2xl md:text-xl">How much does a project cost?</p>
+                <span class="FAQ-icon text-2xl text-text shrink-0">+</span>
+              </button>
+              <p class="FAQ-answer font-medium text-gray text-sm lg:text-xl md:text-[17px]">Every project is different. Let’s talk about your needs to get a tailored estimate.</p>
             </div>
-            <span></span>
-            <div class="FAQ-accordion">
-              <div class="FAQ-header">
-                <p>How long does it take?</p>
-                <span>+</span>
-              </div>
+            
+            <div class="FAQ-accordion border-b border-footer py-5">
+              <button class="FAQ-header w-full flex items-center justify-between text-left" aria-expanded="false">
+                <p class="font-bold text-text text-lg lg:text-2xl md:text-xl">How long does it take?</p>
+                <span class="FAQ-icon text-2xl text-text shrink-0">+</span>
+              </button>
+              <p class="FAQ-answer font-medium text-gray text-sm lg:text-xl md:text-[17px]">Depends on scope — but we always prioritize quality and deadlines.</p>
             </div>
-            <span></span>
-            <div class="FAQ-accordion">
-              <div class="FAQ-header">
-                <p>Can I start with a small project first?</p>
-                <span>+</span>
-              </div>
+            
+            <div class="FAQ-accordion border-b border-footer py-5">
+              <button class="FAQ-header w-full flex items-center justify-between text-left" aria-expanded="false">
+                <p class="font-bold text-text text-lg lg:text-2xl md:text-xl">Can I start with a small project first?</p>
+                <span class="FAQ-icon text-2xl text-text shrink-0">+</span>
+              </button>
+              <p class="FAQ-answer font-medium text-gray text-sm lg:text-xl md:text-[17px]">Absolutely. We often begin with MVPs or pilot projects.</p>
             </div>
           </div>
-          <div class="FAQ-consultation">
-            <div class="consultation-text">
-              <p>Let’s talk it through</p>
-              <p>book a free consultation with our team.</p>
+          <div class="FAQ-consultation self-start bg-orange rounded-3xl p-8 flex flex-col gap-4 lg:w-[380px] shrink-0">
+            <div class="consultation-text flex flex-col gap-2">
+              <p class="font-bold text-light text-[28px] md:text-[32px] lg:text-4xl">Let’s talk it through</p>
+              <p class="font-semibold text-light text-sm md:text-base lg:text-lg">book a free consultation with our team.</pc>
             </div>
-            <img src="../assets/images/Consultation Image.png" alt="Consultation Image">
-            <button><p>Free Consultation</p></button>
+            <img src="../assets/images/Consultation Image.png" alt="Consultation Image" class="rounded-2xl w-full h-auto">
+            <button class="font-bold text-light text-base bg-black rounded-full h-11">Free Consultation</button>
           </div>
         </div>
       </section>
@@ -551,6 +554,21 @@
       </div>
     </footer>
     <script>
+  const faqButtons = document.querySelectorAll('.FAQ-header');
+
+  faqButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const accordion = button.closest('.FAQ-accordion');
+      const answer = accordion.querySelector('.FAQ-answer');
+      const icon = button.querySelector('.FAQ-icon');
+      const isOpen = button.getAttribute('aria-expanded') === 'true';
+
+      answer.classList.toggle('hidden');
+      button.setAttribute('aria-expanded', !isOpen);
+      icon.textContent = isOpen ? '+' : '−';
+    });
+  });
+
   const contactForm = document.getElementById('contactForm');
   const successModal = document.getElementById('successModal');
   const failedModal = document.getElementById('failedModal');
