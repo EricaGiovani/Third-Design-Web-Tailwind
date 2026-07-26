@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
   </head>
   
-      <body class="font-quicksand">
-    <header class="sticky top-0 z-50 w-full h-16 flex items-center px-4 md:px-10 lg:px-20 border-b border-gray/20 bg-light/70 backdrop-blur-md shadow-sm ">
+      <body class="font-quicksand bg-light dark:bg-black">
+    <header class="sticky top-0 z-50 w-full h-16 flex items-center px-4 md:px-10 lg:px-20 border-b bg-light/70 dark:bg-black/70 backdrop-blur-md shadow-sm ">
       <nav class="flex items-center justify-between w-full">
         <div class="flex items-center gap-2">
           <img src="../assets/icons/logo-symbol.svg" alt="Logo Symbol" class="w-6 h-7">
-          <p class="font-semibold text-xl text-text">Your Logo</p>
+          <p class="font-semibold text-xl text-text dark:text-light">Your Logo</p>
         </div>
-        <ul class="hidden lg:flex lg:items-center lg:gap-8 text-text font-semibold text-base">
+        <ul class="hidden lg:flex lg:items-center lg:gap-8 text-text dark:text-label font-semibold text-base">
           <li class="hover:text-orange cursor-pointer">About</li>
           <li class="hover:text-orange cursor-pointer">Service</li>
           <li class="hover:text-orange cursor-pointer">Portfolio</li>
@@ -25,29 +25,29 @@
           <li class="hover:text-orange cursor-pointer">FAQ</li>
         </ul>
         <button class="hidden lg:flex lg:items-center lg:justify-center w-49.25 h-11 px-6 rounded-full bg-orange hover:opacity-90 transition-opacity">
-          <p class="text-light font-bold text-sm">Let's Talk</p>
+          <p class="text-light dark:text-light font-bold text-sm">Let's Talk</p>
         </button>
         <button id="menuOpenBtn" class="hamburger-btn lg:hidden cursor-pointer" aria-label="Buka Menu">
-          <img src="../assets/icons/Icon hamburger.svg" alt="Menu" class="w-6 h-6">
+          <img src="../assets/icons/Icon hamburger.svg" alt="Menu" class="w-6 h-6 dark:invert">
         </button>
       </nav>
     </header>
-    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-50 bg-light translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-50 bg-light dark:bg-black translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
           <div class="menu-header flex items-center justify-between px-4 h-16 border-b border-gray/20">
             <div class="flex items-center gap-2">
               <img src="../assets/icons/logo-symbol.svg" alt="Logo Simbol" class="w-6 h-6">
-              <p class="font-semibold text-xl text-text">Your Logo</p>
+              <p class="font-semibold text-xl text-text dark:text-light">Your Logo</p>
             </div>
-            <button id="menuCloseBtn" class="cursor-pointer text-2xl leading-none text-text" aria-label="Tutup Menu">X</button>
+            <button id="menuCloseBtn" class="cursor-pointer text-2xl leading-none text-text dark:text-label" aria-label="Tutup Menu">X</button>
           </div>
-          <ul class="flex flex-col gap-6 px-4 py-6 text-text font-semibold text-sm">
+          <ul class="flex flex-col gap-6 px-4 py-6 text-text dark:text-label font-semibold text-sm">
           <li class="hover:text-orange cursor-pointer">About</li>
           <li class="hover:text-orange cursor-pointer">Service</li>
           <li class="hover:text-orange cursor-pointer">Portfolio</li>
           <li class="hover:text-orange cursor-pointer">Testimonials</li>
           <li class="hover:text-orange cursor-pointer">FAQ</li>
           </ul>
-          <button class="mobile-contact-btn block mx-4 h-11 w-[calc(100%-2rem)] rounded-full bg-orange hover:opacity-90 transition-opacity text-light font-medium">
+          <button class="mobile-contact-btn block mx-4 h-11 w-[calc(100%-2rem)] rounded-full bg-orange hover:opacity-90 transition-opacity text-light dark:text-light font-medium">
             Let's Talk
           </button>
         </div>
@@ -55,21 +55,22 @@
       <section class="hero flex flex-col items-center px-4 md:px-10 lg:px-20 pt-8 lg:flex-row lg:justify-between lg:pt-12">
         <div class="inside-hero flex flex-col gap-10 w-full max-w-90.25 lg:max-w-130 lg:mt-3">       
           <div class="hero-text flex flex-col gap-3">
-            <p class="text-3xl lg:text-5xl font-bold leading-tight text-text">Your Tech Partner for <span class="text-orange">Smarter Growth</span></p>
-            <p class="text-text lg:text-lg font-semibold">We deliver tailored IT solutions to help you scale with speed and confidence.</p>
+            <p class="text-3xl lg:text-5xl font-bold leading-tight text-text dark:text-light">Your Tech Partner for <span class="text-orange">Smarter Growth</span></p>
+            <p class="text-text dark:text-label lg:text-lg font-semibold">We deliver tailored IT solutions to help you scale with speed and confidence.</p>
           </div>
           <div class="hero-button">
             <button class="w-full lg:w-50 lg:px-8 h-12 rounded-full p-2 flex items-center justify-center gap-1 bg-orange hover:opacity-90 transition-opacity">
-              <p class="text-light font-bold text-base">Let’s Talk</p>
+              <p class="text-light dark:text-light font-bold text-base">Let’s Talk</p>
             </button>
           </div>
         </div>
-        <img src="../assets/images/Image Hero.png" alt="Image Hero" class="w-full lg:w-186.75 h-auto mt-10 lg:mt-0">
+        <img src="../assets/images/Image Hero dark.png" alt="Image Hero Dark" class="hidden dark:block w-full lg:w-186.75 h-auto mt-10 lg:mt-0">
+        <img src="../assets/images/Image Hero.png" alt="Image Hero" class="block dark:hidden w-full lg:w-186.75 h-auto mt-10 lg:mt-0">
       </section>
 
       <section class="content w-full px-4 py-10 md:px-8 md:py-12 lg:px-20 lg:py-10">
         <div class="mx-auto max-w-98.25 md:max-w-3xl lg:max-w-312">
-        <p class="text-center text-base lg:text-2xl font-bold text-text md:text-base">Trusted by Global Innovators & Leading Brands</p>
+        <p class="text-center text-base lg:text-2xl font-bold text-text dark:text-label md:text-base">Trusted by Global Innovators & Leading Brands</p>
           <div class="logo-rows-wrapper lg:mt-14 mt-8 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
             <div class="logo-rows-mobile flex md:hidden items-center gap-8 overflow-x-auto scrollbar-hide justify-center">
               <img src="../assets/icons/Company logo 4.svg" alt="Logo Company 4" class="h-7 w-auto grayscale opacity-70">
@@ -100,43 +101,43 @@
       </section>
       <section class="solutions w-full px-4 py-16 md:px-8 md:py-20 lg:px-20 lg:py-24">
         <div class="solutions-text mx-auto text-center lg:max-w-290">
-          <p class="text-[28px] font-bold text-text md:text-[35px] lg:text-[40px]">End-to-End IT Solutions That Drive Results</p>
-          <p class="mt-4 font-medium text-sm text-gray md:text-base lg:text-lg">From strategy to execution, we deliver solutions that grow your business.</p>
+          <p class="text-[28px] font-bold text-text dark:text-label md:text-[35px] lg:text-[40px]">End-to-End IT Solutions That Drive Results</p>
+          <p class="mt-4 font-medium text-sm text-gray dark:text-label-second md:text-base lg:text-lg">From strategy to execution, we deliver solutions that grow your business.</p>
         </div>
         <div class="solutions-card mt-12 grid grid-cols-2 justify-items-center gap-2 md:gap-4 lg:grid-cols-4 lg:gap-6 md:grid-cols-2">
-          <article class="flex md:h-50 md:w-50 lg:h-63.75 lg:w-63.75 h-[172.5px] w-[172.5px] flex-col items-center justify-center gap-2 rounded-full bg-circle border border-border border-solid">
+          <article class="flex md:h-50 md:w-50 lg:h-63.75 lg:w-63.75 h-[172.5px] w-[172.5px] flex-col items-center justify-center gap-2 rounded-full bg-circle dark:bg-text border border-border dark:border-border-dark border-solid">
             <p class="text-4xl lg:text-5xl md:text-[41px] font-bold text-orange">50+</p>
-            <p class="text-center text-sm lg:text-xl md:text-[17px] text-text font-semibold">Projects Delivered </p>
+            <p class="text-center text-sm lg:text-xl md:text-[17px] text-text dark:text-label font-semibold">Projects Delivered </p>
           </article>
-          <article class="flex md:h-50 md:w-50 lg:h-63.75 lg:w-63.75 h-[172.5px] w-[172.5px] flex-col items-center justify-center gap-2 rounded-full bg-circle border border-border border-solid">
+          <article class="flex md:h-50 md:w-50 lg:h-63.75 lg:w-63.75 h-[172.5px] w-[172.5px] flex-col items-center justify-center gap-2 rounded-full bg-circle dark:bg-text border border-border dark:border-border-dark border-solid">
             <p class="text-4xl lg:text-5xl md:text-[41px] font-bold text-orange">5+</p>
-            <p class="text-center text-sm lg:text-xl md:text-[17px] text-text font-semibold">Years of Experience</p>
+            <p class="text-center text-sm lg:text-xl md:text-[17px] text-text dark:text-label font-semibold">Years of Experience</p>
           </article>
-          <article class="flex md:h-50 md:w-50 lg:h-63.75 lg:w-63.75 h-[172.5px] w-[172.5px] flex-col items-center justify-center gap-2 rounded-full bg-circle border border-border border-solid">
+          <article class="flex md:h-50 md:w-50 lg:h-63.75 lg:w-63.75 h-[172.5px] w-[172.5px] flex-col items-center justify-center gap-2 rounded-full bg-circle dark:bg-text border border-border dark:border-border-dark border-solid">
             <p class="text-4xl lg:text-5xl md:text-[41px] font-bold text-orange">10+</p>
-            <p class="text-center text-sm lg:text-xl md:text-[17px] text-text font-semibold">Industry Awards Won</p>
+            <p class="text-center text-sm lg:text-xl md:text-[17px] text-text dark:text-label font-semibold">Industry Awards Won</p>
           </article>
-          <article class="flex md:h-50 md:w-50 lg:h-63.75 lg:w-63.75 h-[172.5px] w-[172.5px] flex-col items-center justify-center gap-2 rounded-full bg-circle border border-border border-solid">
+          <article class="flex md:h-50 md:w-50 lg:h-63.75 lg:w-63.75 h-[172.5px] w-[172.5px] flex-col items-center justify-center gap-2 rounded-full bg-circle dark:bg-text border border-border dark:border-border-dark border-solid">
             <p class="text-4xl lg:text-5xl md:text-[41px] font-bold text-orange">100%</p>
-            <p class="text-center text-sm lg:text-xl md:text-[17px] text-text font-semibold">Client Satisfaction Rate</p>
+            <p class="text-center text-sm lg:text-xl md:text-[17px] text-text dark:text-label font-semibold">Client Satisfaction Rate</p>
           </article>
         </div>
       </section>
       <section class="our-process w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-20">
         <div class="our-process-header flex flex-col items-center text-center gap-1">
-          <p class="text-[28px] md:text-[36px] lg:text-[40px] font-bold text-text">Our Process</p>
-          <p class="text-sm md:text-base lg:text-lg text-gray font-medium">Clear steps. Smart execution. Result you can count on.</p>
+          <p class="text-[28px] md:text-[36px] lg:text-[40px] font-bold text-text dark:text-label">Our Process</p>
+          <p class="text-sm md:text-base lg:text-lg text-gray darl:text-label-second font-medium">Clear steps. Smart execution. Result you can count on.</p>
         </div>
         <div class="our-process-timeline relative mt-10 flex flex-col gap-8 lg:gap-12">
-          <div class="timeline-line absolute left-6 top-10 bottom-10 w-px bg-border lg:left-1/2 lg:-translate-x-1/2"></div>
+          <div class="timeline-line absolute left-6 top-10 bottom-10 w-px bg-border dark:bg-line-dark lg:left-1/2 lg:-translate-x-1/2"></div>
           <div class="process-item-left flex items-center gap-4 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-10">
-            <div class="process-card order-2 lg:order-1 bg-light border border-border rounded-3xl p-6 flex justify-between items-center flex-1 lg:max-w-[520px]">
+            <div class="process-card order-2 lg:order-1 bg-light dark:bg-text border border-border dark:border-border-dark rounded-3xl p-6 flex justify-between items-center flex-1 lg:max-w-[520px]">
               <div class="process-text">
-                <p class="font-bold text-text text-base lg:text-xl">Discovery & Consultation</p>
-                <p class="process-desc hidden mt-1 text-gray text-sm lg:text-base">Understand Your Needs & Goals</p>
+                <p class="font-bold text-text dark:text-label text-base lg:text-xl">Discovery & Consultation</p>
+                <p class="process-desc hidden mt-1 text-gray dark:text-label-second text-sm lg:text-base">Understand Your Needs & Goals</p>
               </div>
               <button class="process-button" aria-expanded="false">
-                <img src="../assets/icons/Icon ourwork.svg" alt="Arrow" class="process-icon w-4 h-4 transition-transform duration-300">
+                <img src="../assets/icons/Icon ourwork.svg" alt="Arrow" class="process-icon w-4 h-4 transition-transform duration-300 dark:invert">
               </button>
             </div>
             <div class="process-number order-1 lg:order-2 flex justify-center">
@@ -149,24 +150,24 @@
             <div class="process-number flex justify-center">
               <span class="w-12 h-12 rounded-full bg-orange flex items-center justify-center text-white font-semibold z-10">2</span>
             </div>
-            <div class="process-card bg-light border border-border rounded-3xl p-6 flex justify-between items-center flex-1 lg:max-w-[520px]">
+            <div class="process-card bg-light dark:bg-text border border-border dark:border-border-dark rounded-3xl p-6 flex justify-between items-center flex-1 lg:max-w-[520px]">
               <div class="process-text">
-                <p class="font-bold text-text text-base lg:text-xl">Planning & Strategy</p>
-                <p class="process-desc hidden mt-1 text-gray text-sm lg:text-base">Build a Clear,Scalable Roadmap</p>
+                <p class="font-bold text-text dark:text-label text-base lg:text-xl">Planning & Strategy</p>
+                <p class="process-desc hidden mt-1 text-gray dark:text-label-second text-sm lg:text-base">Build a Clear,Scalable Roadmap</p>
               </div>
               <button class="process-button" aria-expanded="false">
-                <img src="../assets/icons/Icon ourwork.svg" alt="Arrow" class="process-icon w-4 h-4 transition-transform duration-300">
+                <img src="../assets/icons/Icon ourwork.svg" alt="Arrow" class="process-icon w-4 h-4 transition-transform duration-300 dark:invert">
               </button>
             </div>
           </div>
           <div class="process-item-left flex items-center gap-4 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-10">
-            <div class="process-card order-2 lg:order-1 bg-light border border-border rounded-3xl p-6 flex justify-between items-center flex-1 lg:max-w-[520px]">
+            <div class="process-card order-2 lg:order-1 bg-light dark:bg-text border border-border dark:border-border-dark rounded-3xl p-6 flex justify-between items-center flex-1 lg:max-w-[520px]">
               <div class="process-text">
-                <p class="font-bold text-text text-base lg:text-xl" >Design & Prototyping</p>
-                <p class="process-desc hidden mt-1 text-gray text-sm lg:text-base">Craft UX That Converts</p>
+                <p class="font-bold text-text dark:text-label text-base lg:text-xl" >Design & Prototyping</p>
+                <p class="process-desc hidden mt-1 text-gray dark:text-label-second text-sm lg:text-base">Craft UX That Converts</p>
               </div>
               <button class="process-button" aria-expanded="false">
-                <img src="../assets/icons/Icon ourwork.svg" alt="Arrow" class="process-icon w-4 h-4 transition-transform duration-300">
+                <img src="../assets/icons/Icon ourwork.svg" alt="Arrow" class="process-icon w-4 h-4 transition-transform duration-300 dark:invert">
               </button>
             </div>
             <div class="process-number order-1 lg:order-2 flex justify-center">
@@ -179,24 +180,24 @@
             <div class="process-number flex justify-center">
               <span class="w-12 h-12 rounded-full bg-orange flex items-center justify-center text-white font-semibold z-10">4</span>
             </div>
-            <div class="process-card bg-light border border-border rounded-3xl p-6 flex justify-between items-center flex-1 lg:max-w-[520px]">
+            <div class="process-card bg-light dark:bg-text border border-border dark:border-border-dark rounded-3xl p-6 flex justify-between items-center flex-1 lg:max-w-[520px]">
               <div class="process-text">
-                <p class="font-bold text-text text-base lg:text-xl">Development & Implementation</p>
-                <p class="process-desc hidden mt-1 text-gray text-sm lg:text-base">Deliver With Speed & Precision</p>
+                <p class="font-bold text-text dark:text-label text-base lg:text-xl">Development & Implementation</p>
+                <p class="process-desc hidden mt-1 text-gray dark:text-label-second text-sm lg:text-base">Deliver With Speed & Precision</p>
               </div>
               <button class="process-button" aria-expanded="false">
-                <img src="../assets/icons/Icon ourwork.svg" alt="Arrow" class="process-icon w-4 h-4 transition-transform duration-300">
+                <img src="../assets/icons/Icon ourwork.svg" alt="Arrow" class="process-icon w-4 h-4 transition-transform duration-300 dark:invert">
               </button>
             </div>
           </div>
           <div class="process-item-left flex items-center gap-4 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-10">
-            <div class="process-card order-2 lg:order-1 bg-light border border-border rounded-3xl p-6 flex justify-between items-center flex-1 lg:max-w-[520px]">
+            <div class="process-card order-2 lg:order-1 bg-light dark:bg-text border border-border dark:border-border-dark rounded-3xl p-6 flex justify-between items-center flex-1 lg:max-w-[520px]">
               <div class="process-text">
-                <p class="font-bold text-text text-base lg:text-xl">Testing & Optimization</p>
-                <p class="process-desc hidden mt-1 text-gray text-sm lg:text-base">Ensure Quality at Every Step</p>
+                <p class="font-bold text-text dark:text-label text-base lg:text-xl">Testing & Optimization</p>
+                <p class="process-desc hidden mt-1 text-gray dark:text-label-second text-sm lg:text-base">Ensure Quality at Every Step</p>
               </div>
               <button class="process-button" aria-expanded="false"> 
-                <img src="../assets/icons/Icon ourwork.svg" alt="Arrow" class="process-icon w-4 h-4 transition-transform duration-300">
+                <img src="../assets/icons/Icon ourwork.svg" alt="Arrow" class="process-icon w-4 h-4 transition-transform duration-300 dark:invert">
               </button>
             </div>
             <div class="process-number order-1 lg:order-2 flex justify-center">
@@ -209,13 +210,13 @@
             <div class="process-number flex justify-center">
               <span class="w-12 h-12 rounded-full bg-orange flex items-center justify-center text-white font-semibold z-10">6</span>
             </div>
-            <div class="process-card bg-light border border-border rounded-3xl p-6 flex justify-between items-center flex-1 lg:max-w-[520px]">
+            <div class="process-card bg-light dark:bg-text border border-border dark:border-border-dark rounded-3xl p-6 flex justify-between items-center flex-1 lg:max-w-[520px]">
               <div class="process-text">
-                <p class="font-bold text-text text-base lg:text-xl">Launch & Growth</p>
-                <p class="process-desc hidden mt-1 text-gray text-sm lg:text-base">Scale, Measure & Improve Continuously</p>
+                <p class="font-bold text-text dark:text-label text-base lg:text-xl">Launch & Growth</p>
+                <p class="process-desc hidden mt-1 text-gray dark:text-label-second text-sm lg:text-base">Scale, Measure & Improve Continuously</p>
               </div>
               <button class="process-button" aria-expanded="false">
-                <img src="../assets/icons/Icon ourwork.svg" alt="Arrow" class="process-icon w-4 h-4 transition-transform duration-300">
+                <img src="../assets/icons/Icon ourwork.svg" alt="Arrow" class="process-icon w-4 h-4 transition-transform duration-300 dark:invert">
               </button>
             </div>
           </div>
@@ -223,88 +224,88 @@
       </section>
       <section class="grow w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-20">
         <div class="grow-text flex flex-col items-center text-center gap-[11px] mb-10 lg:mb-16">
-          <p class="font-semibold text-[28px] lg:font-bold lg:text-[40px] md:text-3xl text-text">Smart IT Solutions That Grow With You</p>
-          <p class="font-medium text-sm lg:text-lg md:text-base text-gray">Tailored tech to boost efficiency, security, and results.</p>
+          <p class="font-semibold text-[28px] lg:font-bold lg:text-[40px] md:text-3xl text-text dark:text-label">Smart IT Solutions That Grow With You</p>
+          <p class="font-medium text-sm lg:text-lg md:text-base text-gray dark:text-label-second">Tailored tech to boost efficiency, security, and results.</p>
         </div>
-        <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
-          <article class="relative rounded-2xl border border-border bg-circle p-5 pt-14 flex flex-col gap-3">
+        <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10"> 
+
+          <article class="relative rounded-2xl border border-border dark:border-border-dark bg-circle dark:bg-text p-5 pt-14 flex flex-col gap-3">
           <img src="../assets/icons/Icon grow 1.svg" alt="Icon 1" class=" absolute -top-6 left-4 w-16 h-16">
-          <p class="font-bold text-base lg:text-xl md:text-lg text-text">Web Development</p>
-          <p class="font-medium text-sm lg:text-base md:text-[15px] text-gray">Build fast, scalable, and SEO-friendly websites.</p>
+          <p class="font-bold text-base lg:text-xl md:text-lg text-text dark:text-label">Web Development</p>
+          <p class="font-medium text-sm lg:text-base md:text-[15px] text-gray dark:text-label-second">Build fast, scalable, and SEO-friendly websites.</p>
         </article>
 
-        <article class="relative rounded-2xl border border-border bg-circle p-5 pt-10 flex flex-col gap-3">
+        <article class="relative rounded-2xl border border-border dark:border-border-dark bg-circle dark:bg-text p-5 pt-10 flex flex-col gap-3">
           <img src="../assets/icons/Icon grow 2.svg" alt="Icon 2" class="absolute -top-6 left-4 w-16 h-16">
-          <p class="font-bold text-base lg:text-xl md:text-lg text-text">Mobile App Development</p>
-          <p class="font-medium text-sm lg:text-base md:text-[15px] text-gray">Native & cross-platform apps tailored to user needs.</p>
+          <p class="font-bold text-base lg:text-xl md:text-lg text-text dark:text-label">Mobile App Development</p>
+          <p class="font-medium text-sm lg:text-base md:text-[15px] text-gray dark:text-label-second">Native & cross-platform apps tailored to user needs.</p>
         </article>
 
-        <article class="relative rounded-2xl border border-border bg-circle p-5 pt-10 flex flex-col gap-3">
+        <article class="relative rounded-2xl border border-border dark:border-border-dark bg-circle dark:bg-text p-5 pt-10 flex flex-col gap-3">
           <img src="../assets/icons/Icon grow 3.svg" alt="Icon 3" class="absolute -top-6 left-4 w-16 h-16 ">
-          <p class="font-bold text-base lg:text-xl md:text-lg text-text">UI/UX Design</p>
-          <p class="font-medium text-sm lg:text-base md:text-[15px] text-gray">Delight users with intuitive and beautiful interfaces</p>
+          <p class="font-bold text-base lg:text-xl md:text-lg text-text dark:text-label ">UI/UX Design</p>
+          <p class="font-medium text-sm lg:text-base md:text-[15px] text-gray dark:text-label-second">Delight users with intuitive and beautiful interfaces</p>
         </article>
 
-        <article class="relative rounded-2xl border border-border bg-circle p-5 pt-10 flex flex-col gap-3">
+        <article class="relative rounded-2xl border border-border dark:border-border-dark bg-circle dark:bg-text p-5 pt-10 flex flex-col gap-3">
           <img src="../assets/icons/Icon grow 4.svg" alt="Icon 4" class="absolute -top-6 left-4 w-16 h-16 ">
-          <p class="font-bold text-base lg:text-xl md:text-lg text-text">Cloud Solutions</p>
-          <p class="font-medium text-sm lg:text-base md:text-[15px] text-gray">Secure and flexible cloud infrastructure for your growth.</p>
+          <p class="font-bold text-base lg:text-xl md:text-lg text-text dark:text-label">Cloud Solutions</p>
+          <p class="font-medium text-sm lg:text-base md:text-[15px] text-gray dark:text-label-second">Secure and flexible cloud infrastructure for your growth.</p>
         </article>
 
-        <article class="relative rounded-2xl border border-border bg-circle p-5 pt-10 flex flex-col gap-3">
+        <article class="relative rounded-2xl border border-border dark:border-border-dark bg-circle dark:bg-text p-5 pt-10 flex flex-col gap-3">
           <img src="../assets/icons/Icon grow 5.svg" alt="Icon 5" class="absolute -top-6 left-4 w-16 h-16">
-          <p class="font-bold text-base lg:text-xl md:text-lg text-text">Software Development</p>
-          <p class="font-medium text-sm lg:text-base md:text-[15px] text-gray">Custom solutions built around your business logic.</p>
+          <p class="font-bold text-base lg:text-xl md:text-lg text-text dark:text-label">Software Development</p>
+          <p class="font-medium text-sm lg:text-base md:text-[15px] text-gray dark:text-label-second">Custom solutions built around your business logic.</p>
         </article>
 
-        <article class="relative rounded-2xl border border-border bg-circle p-5 pt-10 flex flex-col gap-3">
+        <article class="relative rounded-2xl border border-border dark:border-border-dark bg-circle dark:bg-text p-5 pt-10 flex flex-col gap-3">
           <img src="../assets/icons/Icon grow 6.svg" alt="Icon 6" class="absolute -top-6 left-4 w-16 h-16 ">
-          <p class="font-bold text-base lg:text-xl md:text-lg text-text">IT Infrastucture</p>
-          <p class="font-medium text-sm lg:text-base md:text-[15px] text-gray">Scale your backend with reliable tech foundations.</p>
+          <p class="font-bold text-base lg:text-xl md:text-lg text-text dark:text-label ">IT Infrastucture</p>
+          <p class="font-medium text-sm lg:text-base md:text-[15px] text-gray dark:text-label-second">Scale your backend with reliable tech foundations.</p>
         </article>
 
-        <article class="relative rounded-2xl border border-border bg-circle p-5 pt-10 flex flex-col gap-3">
+        <article class="relative rounded-2xl border border-border dark:border-border-dark bg-circle dark:bg-text p-5 pt-10 flex flex-col gap-3">
           <img src="../assets/icons/Icon grow 7.svg" alt="Icon 7" class="absolute -top-6 left-4 w-16 h-16 ">
-          <p class="font-bold text-base lg:text-xl md:text-lg text-text">Cybersecurity Services</p>
-          <p class="font-medium text-sm lg:text-base md:text-[15px] text-gray">Stay protected with enterprise-grade security.</p>
+          <p class="font-bold text-base lg:text-xl md:text-lg text-text dark:text-label">Cybersecurity Services</p>
+          <p class="font-medium text-sm lg:text-base md:text-[15px] text-gray dark:text-label-second">Stay protected with enterprise-grade security.</p>
         </article>
 
-        <article class="relative rounded-2xl border border-border bg-circle p-5 pt-10 flex flex-col gap-3">
+        <article class="relative rounded-2xl border border-border dark:border-border-dark bg-circle dark:bg-text p-5 pt-10 flex flex-col gap-3">
           <img src="../assets/icons/Icon grow 8.svg" alt="Icon 8" class="absolute -top-6 left-4 w-16 h-16 ">
-          <p class="font-bold text-base lg:text-xl md:text-lg text-text">QA Solutions</p>
-          <p class="font-medium text-sm lg:text-base md:text-[15px] text-gray">Ensure performance with rigorous testing frameworks.</p>
+          <p class="font-bold text-base lg:text-xl md:text-lg text-text dark:text-label ">QA Solutions</p>
+          <p class="font-medium text-sm lg:text-base md:text-[15px] text-gray dark:text-label-second">Ensure performance with rigorous testing frameworks.</p>
         </article>
 
-        <article class="relative rounded-2xl border border-border bg-circle p-5 pt-10 flex flex-col gap-3">
+        <article class="relative rounded-2xl border border-border dark:border-border-dark bg-circle dark:bg-text p-5 pt-10 flex flex-col gap-3">
           <img src="../assets/icons/Icon grow 9.svg" alt="Icon 9" class="absolute -top-6 left-4 w-16 h-16">
-          <p class="font-bold text-base lg:text-xl md:text-lg text-text">IT Consulting & Support</p>
-          <p class="font-medium text-sm lg:text-base md:text-[15px] text-gray">Make smarter tech decisions with expert guidance.</p>
+          <p class="font-bold text-base lg:text-xl md:text-lg text-text dark:text-label">IT Consulting & Support</p>
+          <p class="font-medium text-sm lg:text-base md:text-[15px] text-gray dark:text-label-second">Make smarter tech decisions with expert guidance.</p>
         </article>
       </div>
       </section>
       <section class="industry w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-20">
       <div class="flex flex-col gap-[30px] lg:gap-[64px] ">
         <div class="industry-text flex flex-col gap-[14px]">
-          <p class="font-bold text-text text-[32px] lg:text-[40px] md:text-4xl">Built for Your Industry</p>
-          <p class="font-medium text-gray text-sm lg:text-lg md:text-base">We’ve helped companies across industries launch smarter, faster, and more securely.</p>
+          <p class="font-bold text-text dark:text-label text-[32px] lg:text-[40px] md:text-4xl">Built for Your Industry</p>
+          <p class="font-medium text-gray dark:text-label-second text-sm lg:text-lg md:text-base">We’ve helped companies across industries launch smarter, faster, and more securely.</p>
         </div>
         <div class="industry-content flex flex-col md:flex-row gap-8 lg:gap-16 items-start">
           <div class="industry-list flex flex-col gap-4 w-full md:1/3 lg:w-1/4 shrink 0">
             <div class="industry-list2 flex items=center gap-3 pl-3 border-l-4 border-orange cursor-pointer">
-              <p class="font-bold text-text text-base lg:text-xl md:text-lg">Fintech</p>
+              <p class="font-bold text-text dark:text-label text-base lg:text-xl md:text-lg">Fintech</p>
             </div>
 
-            <div class="industry-list2 flex items=center gap-3 pl-3 border-l-4 border-industry cursor-pointer">
+            <div class="industry-list2 flex items=center gap-3 pl-3 border-l-4 border-industry dark:border-industry-dark cursor-pointer">
               <p class="font-bold text-industry text-base lg:text-xl md:text-lg">E-Commerce</p>
             </div>
 
-            <div class="industry-list2 flex items=center gap-3 pl-3 border-l-4 border-industry cursor-pointer">
-              
-              <p class="font-bold text-industry text-base lg:text-xl md:text-lg">Healthcare</p>
+            <div class="industry-list2 flex items=center gap-3 pl-3 border-l-4 border-industry dark:border-industry-dark cursor-pointer">
+              <p class="font-bold text-industry dark:border-industry-dark text-base lg:text-xl md:text-lg">Healthcare</p>
             </div>
           </div>
           <div class="industry-content2 flex flex-col gap-6 w-full md:w-2/3 lg:w-3/4">
-            <p class="text-text text-medium text-sm lg:text-lg">We build secure, scalable, and compliant fintech solutions — from digital wallets to core banking systems — tailored to modern financial needs.</p>
+            <p class="text-text dark:text-label text-medium text-sm lg:text-lg">We build secure, scalable, and compliant fintech solutions — from digital wallets to core banking systems — tailored to modern financial needs.</p>
             <img src="../assets/images/Industry Image Container.png" alt="Image Industry" class="w-full object-cover">
           </div>
         </div>
@@ -312,15 +313,15 @@
       </section>
       <section class="projects w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-20">
         <div class="projects-text text-center flex flex-col gap-[11px]">
-          <p class="font-bold text-[28px] text-text lg:text-[40px] md:text-[35px]">From Vision to Launch! Projects We’re Proud Of</p>
-          <p class="font-medium text-sm text-gray lg:text-lg md:text-base">Take a closer look at our recent work powering startups, enterprises, and everything in between.</p>
+          <p class="font-bold text-[28px] text-text dark:text-label lg:text-[40px] md:text-[35px]">From Vision to Launch! Projects We’re Proud Of</p>
+          <p class="font-medium text-sm text-gray dark:text-label-second lg:text-lg md:text-base">Take a closer look at our recent work powering startups, enterprises, and everything in between.</p>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-10">
           <div class="projects-portfolio flex flex-col gap-[5px]">
             <img src="../assets/images/portfolio 1.png" alt="portfolio 1" class="w-full object-cover rounded-xl">
             <div class="flex flex-col gap-[5px]">
               <p class="text-orange font-medium text-sm lg:text-base md:text-[15px]">Landing Page</p>
-              <p class="text-text font-bold text-base lg:text-xl md:text-lg">Portfolio 1</p>
+              <p class="text-text dark:text-label font-bold text-base lg:text-xl md:text-lg">Portfolio 1</p>
             </div>
           </div>
 
@@ -328,7 +329,7 @@
             <img src="../assets/images/portfolio 2.png" alt="portfolio 2" class="w-full object-cover rounded-xl">
             <div class="flex flex-col gap-[5px]">
               <p class="text-orange font-medium text-sm lg:text-base md:text-[15px]">Landing Page</p>
-              <p class="text-text font-bold text-base lg:text-xl md:text-lg">Portfolio 2</p>
+              <p class="text-text dark:text-label font-bold text-base lg:text-xl md:text-lg">Portfolio 2</p>
             </div>
           </div>
 
@@ -336,28 +337,28 @@
             <img src="../assets/images/portfolio 3.png" alt="portfolio 3" class="w-full object-cover rounded-xl">
             <div class="flex flex-col gap-[5px]">
               <p class="text-orange font-medium text-sm lg:text-base md:text-[15px]">Landing Page</p>
-              <p class="text-text font-bold text-base lg:text-xl md:text-lg">Portfolio 3</p>
+              <p class="text-text dark:text-label font-bold text-base lg:text-xl md:text-lg">Portfolio 3</p>
             </div>
           </div>
         </div>
       </section>
       <section class="patner w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-20 ">
         <div class="patner-text flex flex-col items-center text-center gap-3 mb-10">
-          <p class="font-bold text-text text-[28px] lg:text-[40px] md:[35px]">What Partners Say About Working With Us</p>
-          <p class="font-medium text-gray text-sm lg:text-[18px] md:text-base">Trusted voices. Real experiences. Proven results.</p>
+          <p class="font-bold text-text dark:text-label text-[28px] lg:text-[40px] md:[35px]">What Partners Say About Working With Us</p>
+          <p class="font-medium text-gray dark:text-label-second text-sm lg:text-[18px] md:text-base">Trusted voices. Real experiences. Proven results.</p>
         </div>
 
         <div class="relative mx-auto max-w-[1100px]">
           <div class="absolute inset-y-0 left-0 w-10 z-20 bg-gradient-to-r from-white via-white/70 to-transparent
-          pointer-events-none"></div>
+          pointer-events-none dark:from-black dark:via-black/70 "></div>
           <div class="absolute inset-y-0 right-0 w-10 z-20 bg-gradient-to-l from-white via-white/70 to-transparent
-          pointer-events-none"> </div>
+          pointer-events-none dark:from-black dark:via-black/70"></div>
           <div class="overflow-hidden py-6">
             <div class="relative flex items-center justify-center min-h-[380px]">
-              <div class="patner-card hidden lg:flex absolute left-[-250px] bg-light border border-border rounded-3xl p-8 pt-10 pb-12 flex-col items-center text-center gap-5 w-[500px]">
-                <img src="../assets/icons/quote.svg" alt="Quote" class=" absolute -top-4 left-6 w-8 h-8">
+              <div class="patner-card hidden lg:flex absolute left-[-250px] bg-light dark:bg-text border border-border dark:border-border-dark rounded-3xl p-8 pt-10 pb-12 flex-col items-center text-center gap-5 w-[500px]">
+                <img src="../assets/icons/quote.svg" alt="Quote" class=" absolute -top-4 left-6 w-6 h-6">
                 <img src="../assets/icons/Rating.svg" alt="Rating" class="h-6 mt-2">
-                <p class="font-semibold text-text text-sm lg:text-lg md:text-base">“Working with this team was a game-changer for our project. They understood our vision and turned it into reality efficiently and effectively.”</p>
+                <p class="font-semibold text-text dark:text-label text-sm lg:text-lg md:text-base">“Working with this team was a game-changer for our project. They understood our vision and turned it into reality efficiently and effectively.”</p>
               <div class="patner-author flex flex-col gap-1">
                 <p class="font-semibold text-text text-sm lg:text-lg md:text-base">John Lee</p>
                 <p class="font-semibold text-orange text-sm lg:text-lg md:text-base">Creative Director at Innovate Corp</p>
@@ -365,10 +366,10 @@
               <img src="../assets/images/john lee.png" alt="John Lee" class="absolute -bottom-7 left-1/2 -translate-x-1/2 w-14 h-14">
               </div>
 
-              <div class="patner-card relative z-10 bg-light border border-border rounded-3xl p-8 pt-10 pb-12 flex flex-col items-center text-center gap-5 w-full max-w-[560px] rounded-3xl">
-                <img src="../assets/icons/quote.svg" alt="Quote" class="w-8 h-8 absolute -top-4 left-6">
+              <div class="patner-card relative z-10 bg-light dark:bg-text border border-border dark:border-border-dark rounded-3xl p-8 pt-10 pb-12 flex flex-col items-center text-center gap-5 w-full max-w-[560px] rounded-3xl">
+                <img src="../assets/icons/quote.svg" alt="Quote" class="w-6 h-6 absolute -top-4 left-6">
                 <img src="../assets/icons/Rating.svg" alt="Rating" class="h-6 mt-2">
-                <p class="font-semibold text-text text-sm lg:text-lg md:text-base">“The team delivered exactly what we needed — on time and with outstanding quality. Their attention to detail and communication were top-notch.”</p>
+                <p class="font-semibold text-text dark:text-label text-sm lg:text-lg md:text-base">“The team delivered exactly what we needed — on time and with outstanding quality. Their attention to detail and communication were top-notch.”</p>
                 <div class="patner-author flex flex-col gap-1">
                   <p class="font-semibold text-text text-sm lg:text-lg md:text-base">Sarah Tan</p>
                   <p class="font-semibold text-orange text-sm lg:text-lg md:text-base">Product Manager at Finovate</p>
@@ -376,10 +377,10 @@
                 <img src="../assets/images/patners image.png" alt="Sarah Tan" class="absolute -bottom-7 left-1/2 -translate-x-1/2 w-14 h-14" >
               </div>
 
-              <div class="patner-card hidden lg:flex absolute right-[-250px] bg-light border border-border rounded-3xl p-8 pt-10 pb-12 flex-col items-center text-center gap-5 w-[500px]">
-                <img src="../assets/icons/quote.svg" alt="Quote" class="w-8 h-8 absolute -top-4 left-6">
+              <div class="patner-card hidden lg:flex absolute right-[-250px] bg-light dark:bg-text border border-border dark:border-border-dark rounded-3xl p-8 pt-10 pb-12 flex-col items-center text-center gap-5 w-[500px]">
+                <img src="../assets/icons/quote.svg" alt="Quote" class="w-6 h-6 absolute -top-4 left-6">
                 <img src="../assets/icons/Rating.svg" alt="Rating" class="h-6 mt-2">
-                <p class="font-semibold text-text text-sm lg:text-lg md:text-base">“The collaboration was seamless, and the results surpassed our expectations. Their expertise transformed our ideas into a successful product.”</p>
+                <p class="font-semibold text-text dark:text-label text-sm lg:text-lg md:text-base">“The collaboration was seamless, and the results surpassed our expectations. Their expertise transformed our ideas into a successful product.”</p>
                 <div class="patner-author flex flex-col gap-1">
                   <p class="font-semibold text-text text-sm lg:text-lg md:text-base">Emily Chen</p>
                   <p class="font-semibold text-orange text-sm lg:text-lg md:text-base">Marketing Head at Tech Solutions</p>
@@ -394,116 +395,117 @@
         </div>
       </section>
       <section class="FAQ w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-20">
-        <div class="FAQ-text flex flex-col md:flex-row md:items-end md:justify-between gap-2 mb-8 border-b border-footer py-5">
-          <p class="font-bold text-text text-[28px] lg:text-[40px] md:text-[35px]">Need Help? Start Here.</p>
-          <p class="font-medium text-gray text-sm">Everything you need to know — all in one place.</p>
+        <div class="FAQ-text flex flex-col md:flex-row md:items-end md:justify-between gap-2 mb-8 border-b border-footer dark:border-line-dark py-5">
+          <p class="font-bold text-text dark:text-label text-[28px] lg:text-[40px] md:text-[35px]">Need Help? Start Here.</p>
+          <p class="font-medium text-gray dark:text-label-second text-sm">Everything you need to know — all in one place.</p>
         </div>
         <div class="FAQ-content flex flex-col lg:flex-row gap-8 lg:gap-10">
           <div class="FAQ-container flex-1 flex flex-col">
-            <div class="FAQ-accordion border-b border-footer py-5">
+            <div class="FAQ-accordion border-b border-footer dark:border-line-dark py-5">
               <button class="FAQ-header w-full flex items-center justify-between text-left" aria-expanded="false">
-                <p class="font-bold text-text text-lg lg:text-2xl md:text-xl">What services do you offer?</p>
-                <span class="FAQ-icon text-2xl text-text shrink-0">+</span>
+                <p class="font-bold text-text dark:text-label text-lg lg:text-2xl md:text-xl">What services do you offer?</p>
+                <span class="FAQ-icon text-2xl text-text dark:text-label shrink-0">+</span>
               </button>
-              <p class="FAQ-answer font-medium text-gray text-sm lg:text-xl md:text-[17px]">We provide custom web/app development, cloud solutions, UX/UI design, and more.</p>
+              <p class="FAQ-answer font-medium text-gray dark:text-label-second text-sm lg:text-xl md:text-[17px]">We provide custom web/app development, cloud solutions, UX/UI design, and more.</p>
             </div>
 
-            <div class="FAQ-accordion border-b border-footer py-5">
+            <div class="FAQ-accordion border-b border-footer dark:border-line-dark py-5">
               <button class="FAQ-header w-full flex items-center justify-between text-left" aria-expanded="false">
-                <p class="font-bold text-text text-lg lg:text-2xl md:text-xl">How do I know if this is right for my business?</p>
-                <span class="FAQ-icon text-2xl text-text shrink-0">+</span>
+                <p class="font-bold text-text dark:text-label text-lg lg:text-2xl md:text-xl">How do I know if this is right for my business?</p>
+                <span class="FAQ-icon text-2xl text-text dark:text-label shrink-0">+</span>
               </button>
-              <p class="FAQ-answer font-medium text-gray text-sm lg:text-xl md:text-[17px]">Book a free consult — we’ll assess your goals and recommend the right approach.</p>
+              <p class="FAQ-answer font-medium text-gray dark:text-label-second text-sm lg:text-xl md:text-[17px]">Book a free consult — we’ll assess your goals and recommend the right approach.</p>
             </div>
             
-            <div class="FAQ-accordion border-b border-footer py-5">
+            <div class="FAQ-accordion border-b border-footer dark:border-line-dark py-5">
               <button class="FAQ-header w-full flex items-center justify-between text-left" aria-expanded="false">
-                <p class="font-bold text-text text-lg lg:text-2xl md:text-xl">How much does a project cost?</p>
-                <span class="FAQ-icon text-2xl text-text shrink-0">+</span>
+                <p class="font-bold text-text dark:text-label text-lg lg:text-2xl md:text-xl">How much does a project cost?</p>
+                <span class="FAQ-icon text-2xl text-text dark:text-label shrink-0">+</span>
               </button>
-              <p class="FAQ-answer font-medium text-gray text-sm lg:text-xl md:text-[17px]">Every project is different. Let’s talk about your needs to get a tailored estimate.</p>
+              <p class="FAQ-answer font-medium text-gray dark:text-label-second text-sm lg:text-xl md:text-[17px]">Every project is different. Let’s talk about your needs to get a tailored estimate.</p>
             </div>
             
-            <div class="FAQ-accordion border-b border-footer py-5">
+            <div class="FAQ-accordion border-b border-footer dark:border-line-dark py-5">
               <button class="FAQ-header w-full flex items-center justify-between text-left" aria-expanded="false">
-                <p class="font-bold text-text text-lg lg:text-2xl md:text-xl">How long does it take?</p>
-                <span class="FAQ-icon text-2xl text-text shrink-0">+</span>
+                <p class="font-bold text-text dark:text-label text-lg lg:text-2xl md:text-xl">How long does it take?</p>
+                <span class="FAQ-icon text-2xl text-text dark:text-label shrink-0">+</span>
               </button>
-              <p class="FAQ-answer font-medium text-gray text-sm lg:text-xl md:text-[17px]">Depends on scope — but we always prioritize quality and deadlines.</p>
+              <p class="FAQ-answer font-medium text-gray dark:text-label-second  text-sm lg:text-xl md:text-[17px]">Depends on scope — but we always prioritize quality and deadlines.</p>
             </div>
             
-            <div class="FAQ-accordion border-b border-footer py-5">
+            <div class="FAQ-accordion border-b border-footer dark:border-line-dark py-5">
               <button class="FAQ-header w-full flex items-center justify-between text-left" aria-expanded="false">
-                <p class="font-bold text-text text-lg lg:text-2xl md:text-xl">Can I start with a small project first?</p>
-                <span class="FAQ-icon text-2xl text-text shrink-0">+</span>
+                <p class="font-bold text-text dark:text-label text-lg lg:text-2xl md:text-xl">Can I start with a small project first?</p>
+                <span class="FAQ-icon text-2xl text-text dark:text-label shrink-0">+</span>
               </button>
-              <p class="FAQ-answer font-medium text-gray text-sm lg:text-xl md:text-[17px]">Absolutely. We often begin with MVPs or pilot projects.</p>
+              <p class="FAQ-answer font-medium text-gray dark:text-label-second text-sm lg:text-xl md:text-[17px]">Absolutely. We often begin with MVPs or pilot projects.</p>
             </div>
           </div>
-          <div class="FAQ-consultation self-start bg-orange rounded-3xl p-8 flex flex-col gap-4 lg:w-[380px] shrink-0">
+          <div class="FAQ-consultation self-start bg-orange-dark rounded-3xl p-8 flex flex-col gap-4 lg:w-[380px] shrink-0">
             <div class="consultation-text flex flex-col gap-2">
               <p class="font-bold text-light text-[28px] md:text-[32px] lg:text-4xl">Let’s talk it through</p>
               <p class="font-semibold text-light text-sm md:text-base lg:text-lg">book a free consultation with our team.</pc>
             </div>
             <img src="../assets/images/Consultation Image.png" alt="Consultation Image" class="rounded-2xl w-full h-auto">
-            <button class="font-bold text-light text-base bg-black rounded-full h-11">Free Consultation</button>
+            <button class="font-bold text-light dark:text-black text-base bg-black dark:bg-light rounded-full h-11">Free Consultation</button>
           </div>
         </div>
       </section>
       <section class="form w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-20">
         <div class="form-container mx-auto max-w-[720px]">
           <div class="form-text flex flex-col items-center text-center gap-3 mb-10">
-            <p class="font-bold text-text text-[28px] lg:text-[40px] md:text-[35px]">Ready to Start? Let’s Talk.</p>
-            <p class="font-medium text-gray text-sm lg:text-lg md:text-base">Tell us what you need, and we’ll get back to you soon.</p>
+            <p class="font-bold text-text dark:text-label text-[28px] lg:text-[40px] md:text-[35px]">Ready to Start? Let’s Talk.</p>
+            <p class="font-medium text-gray dark:text-label-second text-sm lg:text-lg md:text-base">Tell us what you need, and we’ll get back to you soon.</p>
           </div>
           <form class="form-fields flex flex-col gap-6" id="contactForm">
             <div class="input-fields flex flex-col gap-2">
-              <label for="name" class="input-label font-bold text-text text-sm">Name</label>
-              <input type="text" id="name" name="name" required class="name-input font-medium text-gray text-sm lg:text-base border border-border rounded-xl px-4 py-3 outline-none focus:border-orange transition-colors" placeholder="Enter your name">
+              <label for="name" class="input-label font-bold text-text dark:text-label text-sm">Name</label>
+              <input type="text" id="name" name="name" required class="name-input font-medium text-gray text-sm lg:text-base border border-border dark:border-line-dark rounded-xl px-4 py-3 outline-none focus:border-orange transition-colors" placeholder="Enter your name">
             </div>
 
             <div class="input-fields flex flex-col gap-2">
-              <label for="email" class="input-label font-bold text-text text-sm">Email</label>
-              <input type="email" id="email" name="email" required class="email-input font-medium text-gray text-sm lg:text-base border border-border rounded-xl px-4 py-3 outline-none focus:border-orange transition-colors" placeholder="Enter your email">
+              <label for="email" class="input-label font-bold text-text dark:text-label text-sm">Email</label>
+              <input type="email" id="email" name="email" required class="email-input font-medium text-gray text-sm lg:text-base border border-border dark:border-line-dark rounded-xl px-4 py-3 outline-none focus:border-orange transition-colors" placeholder="Enter your email">
             </div>
 
             <div class="input-fields flex flex-col gap-2">
-              <label for="message" class="input-label font-bold text-text text-sm">Message</label>
-              <textarea id="message" name="message" required class="message-input h-40 resize-none font-medium text-gray text-sm lg:text-base border border-border rounded-xl px-4 py-3 outline-none focus:border-orange transition-colors" placeholder="Enter your message"></textarea>
+              <label for="message" class="input-label font-bold text-text dark:text-label text-sm">Message</label>
+              <textarea id="message" name="message" required class="message-input h-40 resize-none font-medium text-gray text-sm lg:text-base border
+              border-border dark:border-line-dark rounded-xl px-4 py-3 outline-none focus:border-orange transition-colors" placeholder="Enter your message"></textarea>
             </div>
             
             <div class="flex flex-col gap-[15px]">
               <form class="form-service flex flex-col gap-4">
-              <p class="font-bold text-text text-sm lg:">Services</p>
+              <p class="font-bold text-text dark:text-label text-sm lg:">Services</p>
               <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-4">
                 <label class="checkbox-item flex items-center gap-2 cursor-pointer">
                   <input type="checkbox" name="services" value="web-development" class="w-5 h-5 accent-orange">
-                  <span class="checkbox-label text-text text-medium text text-sm lg:text-base md:text-[15px]">Web Development</span>
+                  <span class="checkbox-label text-text dark:text-label text-medium text text-sm lg:text-base md:text-[15px]">Web Development</span>
                 </label>
 
                 <label class="checkbox-item flex items-center gap-2 cursor-pointer ">
                   <input type="checkbox" name="services" value="mobile-app-development" class="w-5 h-5 accent-orange">
-                  <span class="checkbox-label text-text text-medium text text-sm lg:text-base md:text-[15px]">Mobile App Development</span>
+                  <span class="checkbox-label text-text dark:text-label text-medium text text-sm lg:text-base md:text-[15px]">Mobile App Development</span>
                 </label>
 
                 <label class="checkbox-item flex items-center gap-2 cursor-pointer">
                   <input type="checkbox" name="services" value="ui-ux-design" class="w-5 h-5 accent-orange">
-                  <span class="checkbox-label text-text text-medium text text-sm lg:text-base md:text-[15px]">UI/UX Design</span>
+                  <span class="checkbox-label text-text dark:text-label text-medium text text-sm lg:text-base md:text-[15px]">UI/UX Design</span>
                 </label>
 
                 <label class="checkbox-item flex items-center gap-2 cursor-pointer">
                   <input type="checkbox" name="services" value="cloud-solutions" class="w-5 h-5 accent-orange">
-                  <span class="checkbox-label text-text text-medium text text-sm lg:text-base md:text-[15px]">Cloud Solutions</span>
+                  <span class="checkbox-label text-text dark:text-label text-medium text text-sm lg:text-base md:text-[15px]">Cloud Solutions</span>
                 </label>
 
                 <label class="checkbox-item flex items-center gap-2 cursor-pointer">
                   <input type="checkbox" name="services" value="software-development" class="w-5 h-5 accent-orange">
-                  <span class="checkbox-label text-text text-medium text text-sm lg:text-base md:text-[15px]">Software Development</span>
+                  <span class="checkbox-label text-text dark:text-label text-medium text text-sm lg:text-base md:text-[15px]">Software Development</span>
                 </label>
 
                 <label class="checkbox-item flex items-center gap-2 cursor-pointer">
                   <input type="checkbox" name="services" value="other" class="w-5 h-5 accent-orange">
-                  <span class="checkbox-label text-text text-medium text text-sm lg:text-base md:text-[15px]">Other</span>
+                  <span class="checkbox-label text-text dark:text-label text-medium text text-sm lg:text-base md:text-[15px]">Other</span>
                 </label>
               </div>
             </form>
