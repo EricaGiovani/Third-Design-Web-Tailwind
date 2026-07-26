@@ -27,17 +27,18 @@
         <button class="hidden lg:flex lg:items-center lg:justify-center w-49.25 h-11 px-6 rounded-full bg-orange hover:opacity-90 transition-opacity">
           <p class="text-light font-bold text-sm">Let's Talk</p>
         </button>
-        <label for="menu-toggle" class="hamburger-btn lg:hidden cursor-pointer"><img src="../assets/icons/Icon hamburger.svg" alt="Menu" class="w-6 h-6"></label>
+        <button id="menuOpenBtn" class="hamburger-btn lg:hidden cursor-pointer" aria-label="Buka Menu">
+          <img src="../assets/icons/Icon hamburger.svg" alt="Menu" class="w-6 h-6">
+        </button>
       </nav>
     </header>
-    <input type="checkbox" id="menu-toggle" class="hidden peer">
-    <div class="mobile-menu fixed inset-0 z-50 bg-light translate-x-full peer-checked:translate-x-0 transition-transform duration-300 ease-in-out lg:hidden">
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-50 bg-light translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
           <div class="menu-header flex items-center justify-between px-4 h-16 border-b border-gray/20">
             <div class="flex items-center gap-2">
               <img src="../assets/icons/logo-symbol.svg" alt="Logo Simbol" class="w-6 h-6">
               <p class="font-semibold text-xl text-text">Your Logo</p>
             </div>
-            <label for="menu-toggle" class="cursor-pointer text-2xl leading-none text-text">X</label>
+            <button id="menuCloseBtn" class="cursor-pointer text-2xl leading-none text-text" aria-label="Tutup Menu">X</button>
           </div>
           <ul class="flex flex-col gap-6 px-4 py-6 text-text font-semibold text-sm">
           <li class="hover:text-orange cursor-pointer">About</li>
@@ -46,7 +47,9 @@
           <li class="hover:text-orange cursor-pointer">Testimonials</li>
           <li class="hover:text-orange cursor-pointer">FAQ</li>
           </ul>
-          <button class="mobile-contact-btn block mx-4 h-11 w-[calc(100%-2rem)] rounded-full bg-orange hover:opacity-90 transition-opacity"><p class="contact-paragraph text-light font-medium">Let's Talk</p></button>
+          <button class="mobile-contact-btn block mx-4 h-11 w-[calc(100%-2rem)] rounded-full bg-orange hover:opacity-90 transition-opacity text-light font-medium">
+            Let's Talk
+          </button>
         </div>
     <main>
       <section class="hero flex flex-col items-center px-4 md:px-10 lg:px-20 pt-8 lg:flex-row lg:justify-between lg:pt-12">
@@ -554,6 +557,18 @@
       </div>
     </footer>
     <script>
+  const menuOpenBtn = document.getElementById('menuOpenBtn');
+  const menuCloseBtn = document.getElementById('menuCloseBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuOpenBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('translate-x-full');
+  });
+
+  menuCloseBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('translate-x-full');
+  });
+
   const faqButtons = document.querySelectorAll('.FAQ-header');
 
   faqButtons.forEach(button => {
