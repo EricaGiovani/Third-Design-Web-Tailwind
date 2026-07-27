@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,18 +11,18 @@
   </head>
   
       <body class="font-quicksand bg-light dark:bg-black">
-    <header class="sticky top-0 z-50 w-full h-16 flex items-center px-4 md:px-10 lg:px-20 border-b bg-light/70 dark:bg-black/70 backdrop-blur-md shadow-sm ">
+    <header class="sticky top-0 z-50 w-full h-16 flex items-center px-4 md:px-10 lg:px-20 bg-light/70 dark:bg-black/70 backdrop-blur-md shadow-sm ">
       <nav class="flex items-center justify-between w-full">
         <div class="flex items-center gap-2">
           <img src="../assets/icons/logo-symbol.svg" alt="Logo Symbol" class="w-6 h-7">
           <p class="font-semibold text-xl text-text dark:text-light">Your Logo</p>
         </div>
         <ul class="hidden lg:flex lg:items-center lg:gap-8 text-text dark:text-label font-semibold text-base">
-          <li class="hover:text-orange cursor-pointer">About</li>
-          <li class="hover:text-orange cursor-pointer">Service</li>
-          <li class="hover:text-orange cursor-pointer">Portfolio</li>
-          <li class="hover:text-orange cursor-pointer">Testimonials</li>
-          <li class="hover:text-orange cursor-pointer">FAQ</li>
+          <li><a href="#about" class="hover:text-orange cursor-pointer">About</a></li>
+          <li><a href="#service" class="hover:text-orange cursor-pointer">Services</a></li>
+          <li><a href="#portfolio" class="hover:text-orange cursor-pointer">Portfolio</a></li>
+          <li><a href="#testimonials" class="hover:text-orange cursor-pointer">Testimonials</a></li>
+          <li><a href="#faq" class="hover:text-orange cursor-pointer">FAQ</a></li>
         </ul>
         <button class="hidden lg:flex lg:items-center lg:justify-center w-49.25 h-11 px-6 rounded-full bg-orange hover:opacity-90 transition-opacity">
           <p class="text-light dark:text-light font-bold text-sm">Let's Talk</p>
@@ -41,18 +41,18 @@
             <button id="menuCloseBtn" class="cursor-pointer text-2xl leading-none text-text dark:text-label" aria-label="Tutup Menu">X</button>
           </div>
           <ul class="flex flex-col gap-6 px-4 py-6 text-text dark:text-label font-semibold text-sm">
-          <li class="hover:text-orange cursor-pointer">About</li>
-          <li class="hover:text-orange cursor-pointer">Service</li>
-          <li class="hover:text-orange cursor-pointer">Portfolio</li>
-          <li class="hover:text-orange cursor-pointer">Testimonials</li>
-          <li class="hover:text-orange cursor-pointer">FAQ</li>
+          <li><a href="#about" class="hover:text-orange cursor-pointer">About</a></li>
+          <li><a href="#service" class="hover:text-orange cursor-pointer">Services</a></li>
+          <li><a href="#portfolio" class="hover:text-orange cursor-pointer">Portfolio</a></li>
+          <li><a href="#testimonials" class="hover:text-orange cursor-pointer">Testimonials</a></li>
+          <li><a href="#faq" class="hover:text-orange cursor-pointer">FAQ</a></li>
           </ul>
           <button class="mobile-contact-btn block mx-4 h-11 w-[calc(100%-2rem)] rounded-full bg-orange hover:opacity-90 transition-opacity text-light dark:text-light font-medium">
             Let's Talk
           </button>
         </div>
     <main>
-      <section class="hero flex flex-col items-center px-4 md:px-10 lg:px-20 pt-8 lg:flex-row lg:justify-between lg:pt-12">
+      <section class="hero flex flex-col items-center px-4 md:px-10 lg:px-20 pt-8 lg:flex-row lg:justify-between lg:pt-12 lg:gap-10">
         <div class="inside-hero flex flex-col gap-10 w-full max-w-90.25 lg:max-w-130 lg:mt-3">       
           <div class="hero-text flex flex-col gap-3">
             <p class="text-3xl lg:text-5xl font-bold leading-tight text-text dark:text-light">Your Tech Partner for <span class="text-orange">Smarter Growth</span></p>
@@ -64,7 +64,7 @@
             </button>
           </div>
         </div>
-        <img src="../assets/images/Image Hero dark.png" alt="Image Hero Dark" class="hidden dark:block w-full lg:w-186.75 h-auto mt-10 lg:mt-0">
+        <img src="../assets/images/Image Hero dark.png" alt="Image Hero Dark" class="hidden dark:block w-full lg:w-165 h-auto mt-10 lg:mt-0">
         <img src="../assets/images/Image Hero.png" alt="Image Hero" class="block dark:hidden w-full lg:w-186.75 h-auto mt-10 lg:mt-0">
       </section>
 
@@ -99,7 +99,7 @@
           </div>
         </div>
       </section>
-      <section class="solutions w-full px-4 py-16 md:px-8 md:py-20 lg:px-20 lg:py-24">
+      <section id="about" class="solutions scroll-mt-20 w-full px-4 py-16 md:px-8 md:py-20 lg:px-20 lg:py-24">
         <div class="solutions-text mx-auto text-center lg:max-w-290">
           <p class="text-[28px] font-bold text-text dark:text-label md:text-[35px] lg:text-[40px]">End-to-End IT Solutions That Drive Results</p>
           <p class="mt-4 font-medium text-sm text-gray dark:text-label-second md:text-base lg:text-lg">From strategy to execution, we deliver solutions that grow your business.</p>
@@ -284,7 +284,7 @@
         </article>
       </div>
       </section>
-      <section class="industry w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-20">
+      <section id="service" class="industry scroll-mt-20 w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-20">
       <div class="flex flex-col gap-[30px] lg:gap-[64px] ">
         <div class="industry-text flex flex-col gap-[14px]">
           <p class="font-bold text-text dark:text-label text-[32px] lg:text-[40px] md:text-4xl">Built for Your Industry</p>
@@ -311,7 +311,7 @@
         </div>
       </div>
       </section>
-      <section class="projects w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-20">
+      <section id="portfolio" class="projects scroll-mt-20 w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-20">
         <div class="projects-text text-center flex flex-col gap-[11px]">
           <p class="font-bold text-[28px] text-text dark:text-label lg:text-[40px] md:text-[35px]">From Vision to Launch! Projects We’re Proud Of</p>
           <p class="font-medium text-sm text-gray dark:text-label-second lg:text-lg md:text-base">Take a closer look at our recent work powering startups, enterprises, and everything in between.</p>
@@ -342,7 +342,7 @@
           </div>
         </div>
       </section>
-      <section class="patner w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-20 ">
+      <section id="testimonials" class="patner scroll-mt-20 w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-20 ">
         <div class="patner-text flex flex-col items-center text-center gap-3 mb-10">
           <p class="font-bold text-text dark:text-label text-[28px] lg:text-[40px] md:[35px]">What Partners Say About Working With Us</p>
           <p class="font-medium text-gray dark:text-label-second text-sm lg:text-[18px] md:text-base">Trusted voices. Real experiences. Proven results.</p>
@@ -394,7 +394,7 @@
           </div>
         </div>
       </section>
-      <section class="FAQ w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-20">
+      <section id="faq" class="FAQ scroll-mt-20 w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-20">
         <div class="FAQ-text flex flex-col md:flex-row md:items-end md:justify-between gap-2 mb-8 border-b border-footer dark:border-line-dark py-5">
           <p class="font-bold text-text dark:text-label text-[28px] lg:text-[40px] md:text-[35px]">Need Help? Start Here.</p>
           <p class="font-medium text-gray dark:text-label-second text-sm">Everything you need to know — all in one place.</p>
@@ -441,7 +441,7 @@
               <p class="FAQ-answer font-medium text-gray dark:text-label-second text-sm lg:text-xl md:text-[17px]">Absolutely. We often begin with MVPs or pilot projects.</p>
             </div>
           </div>
-          <div class="FAQ-consultation self-start bg-orange-dark rounded-3xl p-8 flex flex-col gap-4 lg:w-[380px] shrink-0">
+          <div class="FAQ-consultation w-full mx-auto lg:self-start bg-orange-dark rounded-3xl p-8 flex flex-col gap-4 lg:w-[380px] shrink-0">
             <div class="consultation-text flex flex-col gap-2">
               <p class="font-bold text-light text-[28px] md:text-[32px] lg:text-4xl">Let’s talk it through</p>
               <p class="font-semibold text-light text-sm md:text-base lg:text-lg">book a free consultation with our team.</pc>
@@ -532,28 +532,28 @@
       </div>
     </main>
     <footer class="w-full px-4 py-10 md:px-8 md:py-12 lg:px-[140px] lg:py-16 ">
-      <div class="footer-container mx-auto max-w-[1160px] border border-footer border-solid bg-circle rounded-2xl px-6 py-8 md:px-10 md:py-10 lg:px-12 lg:py-12">
+      <div class="footer-container mx-auto max-w-[1160px] border border-footer dark:border-line-dark border-solid bg-circle dark:bg-text rounded-2xl px-6 py-8 md:px-10 md:py-10 lg:px-12 lg:py-12">
         <div class="footer-text flex flex-col-reverse gap-6 lg:flex-row lg:items-start lg:justify-between">
-          <p class="text-text font-bold text-[28px] lg:text-[36px] lg:leading-[44px]">LET'S DISCUSS YOUR IDEAS</p>
-          <div class="flex items-center gap-2"> 
+          <p class="text-text dark:text-label font-bold text-[28px] lg:text-[36px] lg:leading-[44px] lg:w-[281px]">LET'S DISCUSS YOUR IDEAS</p>
+          <div class="flex items-center gap-2">
             <img src="../assets/icons/logo-symbol.svg" alt="Logo" class="w-6 h-6">
-            <span class="font-semibold text-black text-xl lg:text-2xl md:text-[22px]">Your Logo</span>
+            <span class="font-semibold text-black dark:text-light text-xl lg:text-2xl md:text-[22px]">Your Logo</span>
           </div>
         </div>
-        <span class="block w-full h-px bg-border my-8 lg:my-10"></span>
+        <span class="block w-full h-px bg-border dark:bg-line-dark my-8 lg:my-10"></span>
         <div class="footer-icon flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <ul class="menu flex flex-col gap-4 md:flex-row md:gap-6 lg:gap-8">
-            <li class="font-medium text-sm text-text lg:text-base md:text-[15px]">About</li>
-            <li class="font-medium text-sm text-text lg:text-base md:text-[15px]">Services</li>
-            <li class="font-medium text-sm text-text lg:text-base md:text-[15px]">Projects</li>
-            <li class="font-medium text-sm text-text lg:text-base md:text-[15px]">Testimonials</li>
-            <li class="font-medium text-sm text-text lg:text-base md:text-[15px]">FAQ</li>
+            <li class="font-medium text-sm text-text dark:text-label lg:text-base md:text-[15px]">About</li>
+            <li class="font-medium text-sm text-text dark:text-label lg:text-base md:text-[15px]">Services</li>
+            <li class="font-medium text-sm text-text dark:text-label lg:text-base md:text-[15px]">Projects</li>
+            <li class="font-medium text-sm text-text dark:text-label lg:text-base md:text-[15px]">Testimonials</li>
+            <li class="font-medium text-sm text-text dark:text-label lg:text-base md:text-[15px]">FAQ</li>
           </ul>
           <ul class="social-media flex items-center gap-4">
-            <li><img src="../assets/icons/facebook.svg" alt="Facebook" class="w-8 h-8"></li>
-            <li><img src="../assets/icons/instagram.svg" alt="Instagram" class="w-8 h-8"></li>
-            <li><img src="../assets/icons/linkedin.svg" alt="LinkedIn" class="w-8 h-8"></li>
-            <li><img src="../assets/icons/tiktok.svg" alt="TikTok" class="w-8 h-8"></li>
+            <li><img src="../assets/icons/facebook.svg" alt="Facebook" class="w-8 h-8 dark:invert"></li>
+            <li><img src="../assets/icons/instagram.svg" alt="Instagram" class="w-8 h-8 dark:invert"></li>
+            <li><img src="../assets/icons/linkedin.svg" alt="LinkedIn" class="w-8 h-8 dark:invert"></li>
+            <li><img src="../assets/icons/tiktok.svg" alt="TikTok" class="w-8 h-8 dark:invert"></li>
           </ul>
         </div>
       </div>

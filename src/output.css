@@ -488,6 +488,9 @@
   .resize-none {
     resize: none;
   }
+  .scroll-mt-20 {
+    scroll-margin-top: calc(var(--spacing) * 20);
+  }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -568,6 +571,9 @@
   }
   .overflow-x-auto {
     overflow-x: auto;
+  }
+  .scroll-smooth {
+    scroll-behavior: smooth;
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
@@ -1101,6 +1107,11 @@
       height: calc(var(--spacing) * 63.75);
     }
   }
+  .lg\:w-1 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 1);
+    }
+  }
   .lg\:w-1\/4 {
     @media (width >= 64rem) {
       width: calc(1 / 4 * 100%);
@@ -1109,6 +1120,11 @@
   .lg\:w-3\/4 {
     @media (width >= 64rem) {
       width: calc(3 / 4 * 100%);
+    }
+  }
+  .lg\:w-18 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 18);
     }
   }
   .lg\:w-50 {
@@ -1121,9 +1137,24 @@
       width: calc(var(--spacing) * 63.75);
     }
   }
+  .lg\:w-165 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 165);
+    }
+  }
+  .lg\:w-175 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 175);
+    }
+  }
   .lg\:w-186\.75 {
     @media (width >= 64rem) {
       width: calc(var(--spacing) * 186.75);
+    }
+  }
+  .lg\:w-\[281px\] {
+    @media (width >= 64rem) {
+      width: 281px;
     }
   }
   .lg\:w-\[380px\] {
@@ -1230,6 +1261,11 @@
   .lg\:gap-\[64px\] {
     @media (width >= 64rem) {
       gap: 64px;
+    }
+  }
+  .lg\:self-start {
+    @media (width >= 64rem) {
+      align-self: flex-start;
     }
   }
   .lg\:px-8 {
@@ -1355,12 +1391,6 @@
       display: none;
     }
   }
-  .dark\:border {
-    @media (prefers-color-scheme: dark) {
-      border-style: var(--tw-border-style);
-      border-width: 1px;
-    }
-  }
   .dark\:border-border-dark {
     @media (prefers-color-scheme: dark) {
       border-color: var(--color-border-dark);
@@ -1438,6 +1468,11 @@
   .dark\:text-light {
     @media (prefers-color-scheme: dark) {
       color: var(--color-light);
+    }
+  }
+  .dark\:text-text {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-text);
     }
   }
   .dark\:invert {
